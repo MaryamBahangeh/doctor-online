@@ -1,4 +1,6 @@
 .header {
+  padding-block: 1rem;
+
   display: flex;
   gap: 2rem;
 
@@ -20,11 +22,15 @@
   button {
     border: 0.1rem solid var(--color-primary);
     background-color: transparent;
+
+    border-radius: var(--border-radius);
+
+    font-weight: 700;
+
     padding-inline: 2rem;
     padding-block: 1rem;
-    border-radius: var(--border-radius);
+
     margin-inline-start: auto;
-    font-weight: 700;
 
     &:hover {
       background-color: var(--color-primary);
