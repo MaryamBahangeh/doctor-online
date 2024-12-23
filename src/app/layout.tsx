@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
+
+import Header from "@/components/Header";
+
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -19,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={openSans.className}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

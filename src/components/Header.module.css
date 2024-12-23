@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  gap: 2rem;
+
+  nav {
+    > ul {
+      display: flex;
+      gap: 2rem;
+
+      > li {
+        a {
+          &.active {
+            color: var(--color-primary);
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    border: 0.1rem solid var(--color-primary);
+    background-color: transparent;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    border-radius: var(--border-radius);
+    margin-inline-start: auto;
+    font-weight: 700;
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: var(--color-primary-opposite);
+    }
+  }
+}
