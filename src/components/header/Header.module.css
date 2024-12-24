@@ -1,8 +1,8 @@
 .header {
-  padding-block: 1rem;
-
   display: flex;
   gap: 2rem;
+
+  padding-block: 1rem;
 
   nav {
     > ul {
@@ -21,15 +21,13 @@
 
   button {
     border: 0.1rem solid var(--color-primary);
-    background-color: transparent;
-
     border-radius: var(--border-radius);
+
+    background-color: transparent;
 
     font-weight: 700;
 
-    padding-inline: 2rem;
-    padding-block: 1rem;
-
+    padding: 0.5rem 1rem;
     margin-inline-start: auto;
 
     &:hover {

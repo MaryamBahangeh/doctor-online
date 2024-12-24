@@ -1,14 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import fbtoLogo from "../../assests/logo/fbto.png";
-import vinkLogo from "../../assests/logo/vink.png";
+import fbtoLogo from "../../assests/logo/fbto.svg";
+import vinkLogo from "../../assests/logo/vink.svg";
+import asr from "../../assests/logo/asr.svg";
 
-import styles from "./Footer.module.css";
 import MingcuteTelegramFill from "@/icons/MingcuteTelegramFill";
 import MingcuteYoutubeFill from "@/icons/MingcuteYoutubeFill";
 import MingcuteWhatsappFill from "@/icons/MingcuteWhatsappFill";
 import MingcuteLinkedinFill from "@/icons/MingcuteLinkedinFill";
+
+import styles from "./Footer.module.css";
 
 function Footer() {
   return (
@@ -18,6 +20,7 @@ function Footer() {
         <p>Best experiences of online consultations with doctors in Europe</p>
         <div className={styles.logo}></div>
       </div>
+
       <div className={styles.visuals}>
         <ul>
           <li>
@@ -28,6 +31,12 @@ function Footer() {
           <li>
             <Link href="">
               <Image src={vinkLogo} width={50} alt=""></Image>
+            </Link>
+          </li>
+
+          <li>
+            <Link href="">
+              <Image src={asr} width={50} alt=""></Image>
             </Link>
           </li>
         </ul>
@@ -57,7 +66,6 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className={styles.copy}></div>
     </footer>
   );
 }

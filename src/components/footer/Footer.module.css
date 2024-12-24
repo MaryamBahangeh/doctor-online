@@ -18,6 +18,10 @@
     > ul {
       display: flex;
       gap: 0.5rem;
+
+      svg {
+        font-size: 1.5rem;
+      }
     }
   }
 
@@ -27,6 +31,10 @@
     > ul {
       display: flex;
       gap: 0.5rem;
+
+      svg {
+        font-size: 1.5rem;
+      }
     }
   }
 }

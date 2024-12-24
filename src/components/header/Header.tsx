@@ -1,9 +1,10 @@
 "use client";
-import Link from "next/link";
 
-import styles from "./Header.module.css";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+
+import styles from "./Header.module.css";
 
 const pages = [
   { href: "/", title: "home" },

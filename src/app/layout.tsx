@@ -25,10 +25,13 @@ export default function RootLayout({
     <html lang="en" className={openSans.className}>
       <body>
         <Header />
+
         <main>{children}</main>
+
         <p className="tagline">
           Doctor search and appointment booking platform
         </p>
+
         <Footer />
       </body>
     </html>

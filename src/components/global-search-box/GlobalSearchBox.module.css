@@ -1,0 +1,67 @@
+.search-box {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  border: 0.1rem solid var(--color-gray-20);
+  border-radius: 20rem;
+
+  inline-size: min(50rem, 100%);
+  padding: 1rem;
+
+  .input-container {
+    flex: 1;
+
+    display: flex;
+    gap: 0.5rem;
+
+    .prefix {
+      font-size: 1.5rem;
+    }
+
+    input {
+      flex: 1;
+
+      border: none;
+      background-color: transparent;
+      outline: none;
+    }
+  }
+
+  .divider {
+    block-size: 2rem;
+    border: 1px solid var(--color-gray-16);
+  }
+
+  button {
+    background: transparent;
+
+    border: none;
+    border-radius: var(--border-radius);
+
+    padding: 0.5rem 0.5rem;
+
+    svg {
+      font-size: 1.5rem;
+    }
+
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-gray-16);
+    }
+  }
+
+  &:focus-within {
+    border-color: var(--color-primary);
+
+    .prefix {
+      color: var(--color-primary);
+    }
+  }
+}
