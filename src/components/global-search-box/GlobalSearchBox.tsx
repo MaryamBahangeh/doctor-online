@@ -8,7 +8,7 @@ function GlobalSearchBox() {
     <div className={styles["search-box"]}>
       <div className={styles["input-container"]}>
         <MingcuteSearchLine className={styles.prefix}></MingcuteSearchLine>
-        <input placeholder="Doctorname, Speciality, Desease name,...." />
+        <input placeholder="Doctor name, Speciality, Desease name,...." />
       </div>
 
       <div className={styles.divider}></div>
