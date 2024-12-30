@@ -1,6 +1,6 @@
 import styles from "./not-found.module.css";
 import GlobalSearchBox from "@/components/global-search-box/GlobalSearchBox";
-import notfound from "../assests/illustrations/notfound.svg";
+import notfound from "@/assests/illustrations/notfound.svg";
 import Image from "next/image";
 
 function NotFound() {
