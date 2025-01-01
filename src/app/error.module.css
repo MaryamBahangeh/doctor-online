@@ -1,0 +1,53 @@
+.error {
+  display: grid;
+  grid-template-areas: "writing visual" "action visual" "trace trace";
+  row-gap: 1rem;
+  column-gap: 4rem;
+  place-content: center;
+  min-block-size: 100%;
+
+  .writing {
+    grid-area: writing;
+    h3 {
+      padding-block: 1rem;
+    }
+  }
+
+  .action {
+    grid-area: action;
+    button {
+      padding: 0.25rem 1rem;
+      background-color: var(--color-primary);
+      border: none;
+      border-radius: var(--border-radius);
+    }
+  }
+
+  .visual {
+    grid-area: visual;
+    justify-self: start;
+    img {
+      block-size: 0;
+      min-block-size: 100%;
+      inline-size: auto;
+    }
+  }
+
+  .trace {
+    grid-area: trace;
+    min-inline-size: 100%;
+    inline-size: 0;
+
+    details {
+      summary {
+        cursor: pointer;
+      }
+
+      pre {
+        overflow: auto;
+
+        max-block-size: 12rem;
+      }
+    }
+  }
+}

@@ -31,7 +31,7 @@ function Header() {
           ))}
         </ul>
       </nav>
-      <button>login/ sign up</button>
+      <button>Login/ Sign up</button>
     </header>
   );
 }

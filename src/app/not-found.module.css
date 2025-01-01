@@ -1,0 +1,29 @@
+.not-found {
+  display: grid;
+  grid-template-areas: "writing visuals" "search visuals";
+  place-content: center;
+  gap: 1rem;
+  min-block-size: 100%;
+
+  .writing {
+    grid-area: writing;
+
+    h3 {
+      padding-block-end: 1rem;
+    }
+  }
+
+  .visuals {
+    grid-area: visuals;
+
+    img {
+      min-block-size: 100%;
+      block-size: 0;
+      inline-size: auto;
+    }
+  }
+
+  .search {
+    grid-area: search;
+  }
+}
