@@ -23,7 +23,7 @@ function Error({ error, reset }: Props) {
       </div>
 
       <div className={styles.visual}>
-        <Image src={errorImage} alt=""></Image>
+        <Image src={errorImage} alt="" />
       </div>
 
       <div className={styles.trace}>
