@@ -1,0 +1,26 @@
+.page {
+  display: grid;
+  align-content: start;
+  padding-block: 2rem;
+
+  .container {
+    display: grid;
+    grid-template-areas: "filters sort" "filters doctors";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr;
+    align-content: start;
+
+    gap: 2rem;
+    padding-block-start: 4rem;
+
+    .sort {
+      grid-area: sort;
+    }
+    .filters {
+      grid-area: filters;
+    }
+    .doctors {
+      grid-area: doctors;
+    }
+  }
+}

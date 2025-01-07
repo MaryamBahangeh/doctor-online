@@ -1,0 +1,18 @@
+.card {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+  background-color: var(--color-gray-98);
+  color: var(--color-gray-12);
+  font-size: var(--fz-200);
+  font-weight: 600;
+  border-radius: var(--border-radius);
+
+  .title {
+    font-weight: 700;
+  }
+  > * {
+    display: grid;
+    gap: 0.5rem;
+  }
+}

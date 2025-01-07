@@ -1,0 +1,28 @@
+.filter {
+  display: grid;
+  gap: 1rem;
+
+  li {
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-primary-lighter);
+    }
+  }
+
+  .selected {
+    background-color: var(--color-primary);
+  }
+
+  .radio-list {
+    input {
+      outline: none;
+      border: none;
+    }
+
+    display: flex;
+    gap: 0.3rem;
+  }
+}
