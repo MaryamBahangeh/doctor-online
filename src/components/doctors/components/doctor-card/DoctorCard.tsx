@@ -12,6 +12,7 @@ function DoctorCard({ doctor }: Props) {
   return (
     <Card>
       <div className={styles["doctor-card"]}>
+        <Image src={doctor.image} alt={"doctor-image"} width={20} height={20} />
         <div>{doctor.name}</div>
         <div>{doctor.specialityName}</div>
         <div>{doctor.address}</div>

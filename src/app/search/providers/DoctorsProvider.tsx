@@ -2,12 +2,14 @@
 import React, {
   createContext,
   PropsWithChildren,
+  useCallback,
   useContext,
   useMemo,
 } from "react";
 import { DoctorModel } from "@/models/doctor";
 import { doctors } from "@/assests/doctors";
 import { FiltersContext } from "@/app/search/providers/FiltersProvider";
+import { ServiceType } from "@/enums/service-type";
 
 type ContextType = {
   filteredDoctors: DoctorModel[];
@@ -23,14 +25,20 @@ function DoctorsProvider({ children }: Props) {
   const { filters } = useContext(FiltersContext);
 
   const filteredDoctors = useMemo(() => {
-    console.log("ttttttttttttttttt");
-    const filteredBySpecialityId = doctors.filter(
-      (doctor) => doctor.specialityId === filters.specialityId,
-    );
+    let filtered = [...doctors];
 
-    return filteredBySpecialityId.filter(
-      (doctor) => doctor.serviceType === filters.serviceType,
-    );
+    if (filters.specialityId) {
+      filtered = doctors.filter(
+        (doctor) => doctor.specialityId === filters.specialityId,
+      );
+    }
+
+    if (filters.serviceType != ServiceType.BOTH) {
+      return filtered.filter(
+        (doctor) => doctor.serviceType === filters.serviceType,
+      );
+    }
+    return filtered;
   }, [filters]);
 
   return (

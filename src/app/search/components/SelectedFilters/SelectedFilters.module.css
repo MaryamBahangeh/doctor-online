@@ -1,0 +1,16 @@
+.selected-filters {
+  .title {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    /*appearance: none;*/
+    /*outline: none;*/
+    cursor: pointer;
+    color: hsl(0, 100%, 50%);
+  }
+}

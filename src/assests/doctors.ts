@@ -6,8 +6,7 @@ export const doctors: DoctorModel[] = [
     id: "97420f0d-b576-4f65-9ffc-a81b4b1b4e77",
     name: "Sara",
     serviceType: ServiceType.IN_PERSON,
-    image:
-      "/getImage/p24/search-men/155442212a4f2d04e5514bf6f61fd686.jpg?size=150",
+    image: "@/assets/doctors-images/sara.jpg",
     rate: 4.99,
     totalVotes: 294,
     address: "Germany",
@@ -17,10 +16,9 @@ export const doctors: DoctorModel[] = [
   },
   {
     id: "88820f0d-b576-335-9ffc-a81b4b1b4e7",
-    name: "Jon",
+    name: "John",
     serviceType: ServiceType.ONLINE,
-    image:
-      "/getImage/p24/search-men/155442212a4f2d04e5514bf6f61fd686.jpg?size=150",
+    image: "@/assets/doctors-images/John.jpg",
     rate: 4.99,
     totalVotes: 294,
     address: "Netherlands",

@@ -5,9 +5,11 @@ import { SPECIALITY_OPTIONS } from "@/options/speciality-options";
 import { ServiceType } from "@/enums/service-type";
 import { useContext } from "react";
 import { FiltersContext } from "@/app/search/providers/FiltersProvider";
+import SelectedFilters from "@/app/search/components/SelectedFilters/SelectedFilters";
 
 function Filter() {
-  const { filters, dispatchFilters } = useContext(FiltersContext);
+  const { filters, dispatchFilters, selectedFiltersText } =
+    useContext(FiltersContext);
 
   const serviceTypeChangeHandler = (serviceType: ServiceType) => {
     dispatchFilters({
@@ -25,6 +27,7 @@ function Filter() {
 
   return (
     <div className={styles.filter}>
+      {selectedFiltersText.length > 0 && <SelectedFilters />}
       <Card title={"Speciality:"}>
         <ul>
           {SPECIALITY_OPTIONS.map((option) => (
@@ -65,6 +68,7 @@ function Filter() {
             checked={filters.serviceType === ServiceType.IN_PERSON}
             onChange={() => serviceTypeChangeHandler(ServiceType.IN_PERSON)}
           />
+
           <label htmlFor="in-person">In person</label>
         </div>
       </Card>

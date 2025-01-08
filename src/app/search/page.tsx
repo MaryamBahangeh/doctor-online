@@ -5,7 +5,6 @@ import GlobalSearchBox from "@/components/global-search-box/GlobalSearchBox";
 import Card from "@/components/card/Card";
 import DoctorsProvider from "@/app/search/providers/DoctorsProvider";
 import Doctors from "@/components/doctors/doctors";
-import SelectedFilters from "@/app/search/components/SelectedFilters/SelectedFilters";
 
 function Page() {
   return (
@@ -13,7 +12,6 @@ function Page() {
       <DoctorsProvider>
         <div className={styles.page}>
           <GlobalSearchBox />
-          <SelectedFilters />
           <div className={styles.container}>
             <div className={styles.filters}>
               <Filter />

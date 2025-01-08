@@ -9,6 +9,9 @@ export type FiltersAction =
   | {
       type: "setSpecialityId";
       specialityId: string;
+    }
+  | {
+      type: "deleteAllFilters";
     };
 
 export const filtersReducer = (
@@ -23,7 +26,13 @@ export const filtersReducer = (
     case "setSpecialityId": {
       return { ...filters, specialityId: action.specialityId };
     }
-
+    case "deleteAllFilters": {
+      return {
+        ...filters,
+        specialityId: undefined,
+        serviceType: ServiceType.BOTH,
+      };
+    }
     default: {
       throw Error("Unknown action");
     }
