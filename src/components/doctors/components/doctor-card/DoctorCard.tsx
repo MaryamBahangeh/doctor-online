@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-
 import Card from "@/components/card/Card";
 import StarBold from "@/icons/StarBold";
 import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
