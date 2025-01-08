@@ -5,7 +5,7 @@ export type DoctorModel = {
   id: string;
   name: string;
   serviceType: ServiceType;
-  image: typeof Image;
+  image: Image;
   rate: number;
   totalVotes: number;
   address: string;
