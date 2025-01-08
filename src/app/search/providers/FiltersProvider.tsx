@@ -1,17 +1,20 @@
 "use client";
+
 import React, {
   createContext,
   PropsWithChildren,
   useMemo,
   useReducer,
+  Dispatch,
 } from "react";
-import { ServiceType } from "@/enums/service-type";
-import { FiltersType } from "@/app/search/types/filters-type";
+
 import {
   filtersReducer,
   FiltersAction,
 } from "@/app/search/reducers/FiltersReducer";
-import { Dispatch } from "react";
+
+import { ServiceType } from "@/enums/service-type";
+import { FiltersType } from "@/app/search/types/filters-type";
 import { SPECIALITY_OPTIONS } from "@/options/speciality-options";
 
 const defaultValue: FiltersType = {

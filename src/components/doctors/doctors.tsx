@@ -1,9 +1,11 @@
 "use client";
-import React, { useContext } from "react";
-import styles from "./doctors.module.css";
 
-import DoctorCard from "@/components/doctors/components/doctor-card/DoctorCard";
+import React, { useContext } from "react";
+
 import { DoctorsContext } from "@/app/search/providers/DoctorsProvider";
+import DoctorCard from "@/components/doctors/components/doctor-card/DoctorCard";
+
+import styles from "./doctors.module.css";
 
 function Doctors() {
   const { filteredDoctors } = useContext(DoctorsContext);

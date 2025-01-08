@@ -2,14 +2,15 @@
 import React, {
   createContext,
   PropsWithChildren,
-  useCallback,
   useContext,
   useMemo,
 } from "react";
-import { DoctorModel } from "@/models/doctor";
-import { doctors } from "@/assests/doctors";
+
 import { FiltersContext } from "@/app/search/providers/FiltersProvider";
 import { ServiceType } from "@/enums/service-type";
+
+import { DoctorModel } from "@/models/doctor";
+import { doctors } from "@/assests/doctors";
 
 type ContextType = {
   filteredDoctors: DoctorModel[];

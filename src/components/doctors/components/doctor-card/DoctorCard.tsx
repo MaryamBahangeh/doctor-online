@@ -1,10 +1,13 @@
 import React from "react";
-import StarBold from "@/icons/StarBold";
-import { DoctorModel } from "@/models/doctor";
-import Card from "@/components/card/Card";
 import Image from "next/image";
-import styles from "./DoctorCard.module.css";
+
+import Card from "@/components/card/Card";
+
+import StarBold from "@/icons/StarBold";
 import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
+import { DoctorModel } from "@/models/doctor";
+
+import styles from "./DoctorCard.module.css";
 
 type Props = {
   doctor: DoctorModel;
@@ -32,6 +35,7 @@ function DoctorCard({ doctor }: Props) {
             </div>
           </div>
         </div>
+
         <div className={styles["other-info"]}>
           <div>{doctor.description}</div>
           <div className={styles.address}>
@@ -50,8 +54,9 @@ function DoctorCard({ doctor }: Props) {
               {doctor.firstAvailableAppointment}
             </span>
           </div>
+
           <div className={styles.book}>
-            <button>Book an online appointment</button>
+            <button>Book an appointment</button>
           </div>
         </div>
       </div>

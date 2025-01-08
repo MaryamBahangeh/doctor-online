@@ -11,7 +11,10 @@
       background-color: var(--color-primary-lighter);
     }
   }
-
+  .speciality {
+    block-size: 25rem;
+    overflow-y: auto;
+  }
   .selected {
     background-color: var(--color-primary);
   }

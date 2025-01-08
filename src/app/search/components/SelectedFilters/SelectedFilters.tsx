@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useContext, useMemo } from "react";
+import React, { useContext } from "react";
+import { FiltersContext } from "@/app/search/providers/FiltersProvider";
 import Card from "@/components/card/Card";
 import styles from "./SelectedFilters.module.css";
-import { FiltersContext } from "@/app/search/providers/FiltersProvider";
 
 function SelectedFilters() {
   const { dispatchFilters, selectedFiltersText } = useContext(FiltersContext);

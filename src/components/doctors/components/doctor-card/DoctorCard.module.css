@@ -1,8 +1,8 @@
 .doctor-card {
   display: grid;
   gap: 1rem;
-
   padding: 0.5rem;
+
   .container {
     display: flex;
     gap: 1rem;
@@ -50,8 +50,8 @@
         border: 0.1rem solid var(--color-primary);
         border-radius: var(--border-radius);
 
-        inline-size: 20rem;
-        min-inline-size: min(20rem, 100%);
+        inline-size: 15rem;
+        min-inline-size: min(15rem, 100%);
 
         background-color: var(--color-primary);
         color: var(--color-primary-opposite);
@@ -62,10 +62,12 @@
         margin-inline-start: auto;
 
         &:hover {
+          background-color: var(--color-primary-lighter);
           cursor: pointer;
         }
       }
     }
+
     .data {
       font-weight: 700;
       padding-inline-start: 0.5rem;

@@ -1,11 +1,15 @@
 "use client";
-import styles from "./Filter.module.css";
-import Card from "@/components/card/Card";
-import { SPECIALITY_OPTIONS } from "@/options/speciality-options";
-import { ServiceType } from "@/enums/service-type";
+
 import { useContext } from "react";
+
 import { FiltersContext } from "@/app/search/providers/FiltersProvider";
 import SelectedFilters from "@/app/search/components/SelectedFilters/SelectedFilters";
+import Card from "@/components/card/Card";
+
+import { SPECIALITY_OPTIONS } from "@/options/speciality-options";
+import { ServiceType } from "@/enums/service-type";
+
+import styles from "./Filter.module.css";
 
 function Filter() {
   const { filters, dispatchFilters, selectedFiltersText } =
@@ -28,7 +32,7 @@ function Filter() {
   return (
     <div className={styles.filter}>
       {selectedFiltersText.length > 0 && <SelectedFilters />}
-      <Card title={"Speciality:"}>
+      <Card title={"Speciality:"} className={styles.speciality}>
         <ul>
           {SPECIALITY_OPTIONS.map((option) => (
             <li
@@ -46,6 +50,7 @@ function Filter() {
           ))}
         </ul>
       </Card>
+
       <Card title={"Service type:"}>
         <div className={styles["radio-list"]}>
           <input
