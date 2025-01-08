@@ -1,4 +1,74 @@
 .doctor-card {
   display: grid;
   gap: 1rem;
+
+  padding: 0.5rem;
+  .container {
+    display: flex;
+    gap: 1rem;
+
+    .image-container {
+      .image {
+        border-radius: 99%;
+      }
+    }
+
+    .doctor-info {
+      display: grid;
+      gap: 0.5rem;
+
+      .name {
+        font-size: var(--fz-400);
+        font-weight: 800;
+      }
+
+      .description {
+        color: var(--color-gray-40);
+      }
+      .rate {
+        display: flex;
+        gap: 0.5rem;
+
+        > span {
+          color: var(--color-blue);
+        }
+      }
+    }
+  }
+  .other-info {
+    display: grid;
+    gap: 1rem;
+
+    .address {
+      color: var(--color-gray-50);
+    }
+
+    .book {
+      justify-self: center;
+
+      button {
+        border: 0.1rem solid var(--color-primary);
+        border-radius: var(--border-radius);
+
+        inline-size: 20rem;
+        min-inline-size: min(20rem, 100%);
+
+        background-color: var(--color-primary);
+        color: var(--color-primary-opposite);
+
+        font-weight: 700;
+
+        padding: 0.5rem 1rem;
+        margin-inline-start: auto;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .data {
+      font-weight: 700;
+      padding-inline-start: 0.5rem;
+    }
+  }
 }

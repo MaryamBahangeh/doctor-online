@@ -8,9 +8,9 @@
   button {
     background-color: transparent;
     border: none;
-    /*appearance: none;*/
-    /*outline: none;*/
+    appearance: none;
+    outline: none;
     cursor: pointer;
-    color: hsl(0, 100%, 50%);
+    color: var(--color-danger);
   }
 }
