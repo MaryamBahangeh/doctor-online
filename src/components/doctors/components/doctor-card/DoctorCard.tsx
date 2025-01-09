@@ -21,6 +21,8 @@ function DoctorCard({ doctor }: Props) {
               className={styles.image}
               src={doctor.image}
               alt="doctor image"
+              width={70}
+              height={70}
             ></Image>
           </div>
 
