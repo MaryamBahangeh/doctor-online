@@ -3,14 +3,43 @@
     display: flex;
     justify-content: space-between;
     font-weight: 700;
+
+    .delete-all {
+      background-color: transparent;
+      border: none;
+      appearance: none;
+      outline: none;
+      cursor: pointer;
+      color: var(--color-danger);
+    }
   }
 
-  button {
-    background-color: transparent;
-    border: none;
-    appearance: none;
-    outline: none;
-    cursor: pointer;
-    color: var(--color-danger);
+  .filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    .filter {
+      border-radius: var(--border-radius);
+      border: 0.1rem solid var(--color-primary);
+      font-size: var(--fz-300);
+      padding: 0.2rem 0.5rem;
+
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+
+      button {
+        border: none;
+        background-color: transparent;
+        appearance: none;
+        > * {
+          color: var(--color-danger);
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

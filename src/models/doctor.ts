@@ -1,9 +1,8 @@
-import { ServiceType } from "@/enums/service-type";
-
 export type DoctorModel = {
   id: string;
   name: string;
-  serviceType: ServiceType;
+  serviceType: string;
+  serviceTypeName: string;
   image: string;
   rate: number;
   totalVotes: number;

@@ -1,15 +1,17 @@
 import { DoctorModel } from "@/models/doctor";
-import { ServiceType } from "@/enums/service-type";
+
 import sara from "@/assests/doctors-images/sara.jpg";
 import john from "@/assests/doctors-images/john.jpg";
 import mary from "@/assests/doctors-images/mary.jpg";
 import jack from "@/assests/doctors-images/jack.png";
+import { SERVICE_TYPE } from "@/options/service-types-options";
 
 export const doctors: DoctorModel[] = [
   {
     id: "97420f0d-b576-4f65-9ffc-a81b4b1b4e77",
     name: "Sara",
-    serviceType: ServiceType.ONLINE,
+    serviceType: SERVICE_TYPE[0].key,
+    serviceTypeName: SERVICE_TYPE[0].key,
     image: sara.src,
     rate: 4.99,
     totalVotes: 594,
@@ -23,7 +25,8 @@ export const doctors: DoctorModel[] = [
   {
     id: "88820f0d-b576-9ffc-a81b4b1b4e7",
     name: "John",
-    serviceType: ServiceType.IN_PERSON,
+    serviceType: SERVICE_TYPE[1].key,
+    serviceTypeName: SERVICE_TYPE[1].key,
     image: john.src,
     rate: 4.99,
     totalVotes: 294,
@@ -36,7 +39,8 @@ export const doctors: DoctorModel[] = [
   {
     id: "88820f0d-b576-335-9ffc-a81b1b4e7",
     name: "Mary",
-    serviceType: ServiceType.ONLINE,
+    serviceType: SERVICE_TYPE[0].key,
+    serviceTypeName: SERVICE_TYPE[0].key,
     image: mary.src,
     rate: 4.99,
     totalVotes: 894,
@@ -49,7 +53,8 @@ export const doctors: DoctorModel[] = [
   {
     id: "8882000f0d-b576-335-9ffc-a81b4b1b4e7",
     name: "Jack",
-    serviceType: ServiceType.IN_PERSON,
+    serviceType: SERVICE_TYPE[1].value,
+    serviceTypeName: SERVICE_TYPE[1].key,
     image: jack.src,
     rate: 4.99,
     totalVotes: 2014,
@@ -63,7 +68,8 @@ export const doctors: DoctorModel[] = [
   {
     id: "97420f0d-b576-4f65-fc-a81b4b1b4e77",
     name: "Sara",
-    serviceType: ServiceType.IN_PERSON,
+    serviceType: SERVICE_TYPE[1].value,
+    serviceTypeName: SERVICE_TYPE[1].key,
     image: sara.src,
     rate: 4.99,
     totalVotes: 594,
@@ -77,7 +83,8 @@ export const doctors: DoctorModel[] = [
   {
     id: "88820f0d-76-9ffc-a81b4b1b4e7",
     name: "John",
-    serviceType: ServiceType.ONLINE,
+    serviceType: SERVICE_TYPE[0].value,
+    serviceTypeName: SERVICE_TYPE[0].key,
     image: john.src,
     rate: 4.99,
     totalVotes: 294,
@@ -90,20 +97,22 @@ export const doctors: DoctorModel[] = [
   {
     id: "88820f0d-b576-335ffc-a81b1b4e7",
     name: "Mary",
-    serviceType: ServiceType.IN_PERSON,
+    serviceType: SERVICE_TYPE[2].value,
+    serviceTypeName: SERVICE_TYPE[2].key,
     image: mary.src,
     rate: 4.99,
     totalVotes: 894,
     address: "England",
     firstAvailableAppointment: "Next week",
-    specialityId: "7",
-    specialityName: "Dermatologist",
+    specialityId: "6",
+    specialityName: "Cosmetologist",
     description: "caring for newborn and premature babies",
   },
   {
     id: "8882000f-b576-335-9ffc-a81b4b1b4e7",
     name: "Jack",
-    serviceType: ServiceType.ONLINE,
+    serviceType: SERVICE_TYPE[0].value,
+    serviceTypeName: SERVICE_TYPE[0].key,
     image: jack.src,
     rate: 4.99,
     totalVotes: 2014,

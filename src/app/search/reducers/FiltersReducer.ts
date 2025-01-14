@@ -1,17 +1,17 @@
 import { FiltersType } from "@/app/search/types/filters-type";
-import { ServiceType } from "@/enums/service-type";
 
 export type FiltersAction =
   | {
-      type: "setServiceType";
-      serviceType: ServiceType;
+      type: "filtered";
+      key: keyof FiltersType;
+      value: string;
     }
   | {
-      type: "setSpecialityId";
-      specialityId: string;
+      type: "deletedFilter";
+      key: keyof FiltersType;
     }
   | {
-      type: "deleteAllFilters";
+      type: "deletedAllFilters";
     };
 
 export const filtersReducer = (
@@ -19,19 +19,18 @@ export const filtersReducer = (
   action: FiltersAction,
 ): FiltersType => {
   switch (action.type) {
-    case "setServiceType": {
-      return { ...filters, serviceType: action.serviceType };
+    case "filtered": {
+      return { ...filters, [action.key]: action.value };
     }
 
-    case "setSpecialityId": {
-      return { ...filters, specialityId: action.specialityId };
+    case "deletedFilter": {
+      const clonedFilters = { ...filters };
+      delete clonedFilters[action.key];
+      return clonedFilters;
     }
-    case "deleteAllFilters": {
-      return {
-        ...filters,
-        specialityId: undefined,
-        serviceType: ServiceType.BOTH,
-      };
+
+    case "deletedAllFilters": {
+      return {};
     }
     default: {
       throw Error("Unknown action");

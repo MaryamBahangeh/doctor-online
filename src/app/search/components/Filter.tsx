@@ -7,75 +7,59 @@ import SelectedFilters from "@/app/search/components/SelectedFilters/SelectedFil
 import Card from "@/components/card/Card";
 
 import { SPECIALITY_OPTIONS } from "@/options/speciality-options";
-import { ServiceType } from "@/enums/service-type";
 
 import styles from "./Filter.module.css";
+import { FiltersType } from "@/app/search/types/filters-type";
+import { SERVICE_TYPE } from "@/options/service-types-options";
 
 function Filter() {
-  const { filters, dispatchFilters, selectedFiltersText } =
-    useContext(FiltersContext);
+  const { filters, dispatchFilters } = useContext(FiltersContext);
 
-  const serviceTypeChangeHandler = (serviceType: ServiceType) => {
+  const filter = (value: string, filterType: keyof FiltersType) => {
     dispatchFilters({
-      type: "setServiceType",
-      serviceType: serviceType,
-    });
-  };
-
-  const specialityClickHandler = (setSpecialityId: string) => {
-    dispatchFilters({
-      type: "setSpecialityId",
-      specialityId: setSpecialityId,
+      type: "filtered",
+      key: filterType,
+      value: value,
     });
   };
 
   return (
     <div className={styles.filter}>
-      {selectedFiltersText.length > 0 && <SelectedFilters />}
+      <SelectedFilters />
       <Card title={"Speciality:"} className={styles.speciality}>
         <ul>
           {SPECIALITY_OPTIONS.map((option) => (
             <li
-              key={option.value}
-              value={option.value}
+              key={option.key}
+              value={option.key}
               className={
-                filters.specialityId === option.value ? styles.selected : ""
+                filters["specialityName"] === option.key ? styles.selected : ""
               }
               onClick={() => {
-                specialityClickHandler(option.value);
+                filter(option.key, "specialityName");
               }}
             >
-              {option.label}
+              {option.key}
             </li>
           ))}
         </ul>
       </Card>
 
       <Card title={"Service type:"}>
-        <div className={styles["radio-list"]}>
-          <input
-            type="radio"
-            id="online"
-            name="service-type"
-            value={ServiceType.ONLINE}
-            checked={filters.serviceType === ServiceType.ONLINE}
-            onChange={() => serviceTypeChangeHandler(ServiceType.ONLINE)}
-          />
-          <label htmlFor="online">Online</label>
-        </div>
+        {SERVICE_TYPE.map((option) => (
+          <div key={option.value} className={styles["radio-list"]}>
+            <input
+              type="radio"
+              id={option.key}
+              name={option.key}
+              value={option.value}
+              checked={filters["serviceTypeName"] === option.key}
+              onChange={() => filter(option.key, "serviceTypeName")}
+            />
 
-        <div className={styles["radio-list"]}>
-          <input
-            type="radio"
-            id="in-person"
-            name="service-type"
-            value={ServiceType.IN_PERSON}
-            checked={filters.serviceType === ServiceType.IN_PERSON}
-            onChange={() => serviceTypeChangeHandler(ServiceType.IN_PERSON)}
-          />
-
-          <label htmlFor="in-person">In person</label>
-        </div>
+            <label htmlFor={option.key}>{option.key}</label>
+          </div>
+        ))}
       </Card>
     </div>
   );

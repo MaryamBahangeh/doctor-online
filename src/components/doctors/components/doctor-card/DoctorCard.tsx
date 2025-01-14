@@ -45,7 +45,7 @@ function DoctorCard({ doctor }: Props) {
 
           <div>
             Service type :{" "}
-            <span className={styles.data}>{doctor.serviceType}</span>
+            <span className={styles.data}>{doctor.serviceTypeName}</span>
           </div>
 
           <div>
