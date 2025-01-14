@@ -19,7 +19,9 @@ function SelectedFilters() {
     dispatchFilters({ type: "deletedFilter", key });
   };
 
-  const keyValues: (keyof FiltersType)[] = Object.keys(filters);
+  const keyValues: (keyof FiltersType)[] = Object.keys(
+    filters,
+  ) as (keyof FiltersType)[];
 
   return (
     <Card>

@@ -33,13 +33,43 @@ function DoctorsProvider({ children }: Props) {
     return doctor[filterName] === filters[filterName];
   };
 
+  const doesSomeInclude = (
+    filterName: keyof FiltersType,
+    doctor: DoctorModel,
+  ) => {
+    if (filters[filterName] === "") {
+      return true;
+    }
+
+    return (
+      doctor.name
+        .toLowerCase()
+        .includes((filters[filterName] as string).toLowerCase()) ||
+      doctor.address
+        .toLowerCase()
+        .includes((filters[filterName] as string).toLowerCase()) ||
+      doctor.specialityName
+        .toLowerCase()
+        .includes((filters[filterName] as string).toLowerCase()) ||
+      doctor.description
+        .toLowerCase()
+        .includes((filters[filterName] as string).toLowerCase())
+    );
+  };
+
   const isActiveDoctor = useCallback(
     (doctor: DoctorModel): boolean => {
-      const keyValues: (keyof FiltersType)[] = Object.keys(filters);
+      const keyValues: (keyof FiltersType)[] = Object.keys(
+        filters,
+      ) as (keyof FiltersType)[];
 
       const result: boolean[] = [];
       keyValues.map((key) => {
-        result.push(doesInclude(key, doctor));
+        if (key === "name") {
+          result.push(doesSomeInclude(key, doctor));
+        } else {
+          result.push(doesInclude(key, doctor));
+        }
       });
       return result.find((x) => !x) == undefined;
     },
