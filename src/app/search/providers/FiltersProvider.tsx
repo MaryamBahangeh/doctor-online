@@ -5,6 +5,7 @@ import React, {
   PropsWithChildren,
   useReducer,
   Dispatch,
+  ReactElement,
 } from "react";
 
 import {
@@ -26,11 +27,15 @@ export const FiltersContext = createContext<ContextType>({
   dispatchFilters: () => {},
 });
 
-function FiltersProvider({ children }: PropsWithChildren) {
-  const [filters, dispatchFilters] = useReducer(
-    filtersReducer,
-    filterDefaultValue,
-  );
+type Props = PropsWithChildren & {
+  defaultFilters: FiltersType;
+};
+
+export default function FiltersProvider({
+  children,
+  defaultFilters,
+}: Props): ReactElement {
+  const [filters, dispatchFilters] = useReducer(filtersReducer, defaultFilters);
 
   return (
     <FiltersContext.Provider value={{ filters, dispatchFilters }}>
@@ -38,5 +43,3 @@ function FiltersProvider({ children }: PropsWithChildren) {
     </FiltersContext.Provider>
   );
 }
-
-export default FiltersProvider;

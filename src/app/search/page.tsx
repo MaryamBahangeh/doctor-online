@@ -7,10 +7,22 @@ import FiltersProvider from "@/app/search/providers/FiltersProvider";
 import DoctorsProvider from "@/app/search/providers/DoctorsProvider";
 
 import styles from "./page.module.css";
+import { ReactElement } from "react";
+import { FiltersType } from "@/app/search/types/filters-type";
 
-function Page() {
+type SearchParams = { [key: string]: string | string[] | undefined };
+
+type Props = {
+  searchParams: Promise<SearchParams>;
+};
+
+export default async function Page({
+  searchParams,
+}: Props): Promise<ReactElement> {
+  const defaultFilters = generateDefaultFilters(await searchParams);
+
   return (
-    <FiltersProvider>
+    <FiltersProvider defaultFilters={defaultFilters}>
       <DoctorsProvider>
         <div className={styles.page}>
           <div className={styles.search}>
@@ -34,4 +46,21 @@ function Page() {
   );
 }
 
-export default Page;
+function generateDefaultFilters(searchParams: SearchParams): FiltersType {
+  const { specialityName, serviceTypeName } = searchParams;
+
+  return {
+    specialityName: normalizeFilter(specialityName),
+    serviceTypeName: normalizeFilter(serviceTypeName),
+  };
+}
+
+function normalizeFilter(
+  value: string | string[] | undefined,
+): string | undefined {
+  if (Array.isArray(value)) {
+    return value[0];
+  }
+
+  return value;
+}
