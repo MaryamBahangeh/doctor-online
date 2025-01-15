@@ -1,33 +1,36 @@
 "use client";
 
-import React, { useContext, useState } from "react";
-import styles from "./AppointmentFilter.module.css";
+import React, { useContext } from "react";
+
 import SelectComponent from "@/components/select/SelectComponent";
 import { APPOINTMENT_TIMES } from "@/options/appointment-time-options";
 import { SelectOptionType } from "@/types/select-option-type";
-import { FiltersContext } from "@/app/search/providers/FiltersProvider";
 import { FiltersType } from "@/types/filters-type";
+import { FiltersContext } from "@/app/search/providers/FiltersProvider";
+
+import styles from "./AppointmentFilter.module.css";
 
 function AppointmentFilter() {
   const { filters, dispatchFilters } = useContext(FiltersContext);
 
-  const filter = (value: string, filterType: keyof FiltersType) => {
+  const filter = (value: string, filterType: keyof FiltersType): void => {
     dispatchFilters({
       type: "filtered",
       key: filterType,
       value: value,
     });
   };
-  const selectedOption = () => {
+
+  const selectedOption = (): SelectOptionType => {
     if (filters["firstAvailableAppointmentLabel"]) {
       return APPOINTMENT_TIMES.find(
         (option) => option.label === filters["firstAvailableAppointmentLabel"],
-      );
+      )!;
     }
     return APPOINTMENT_TIMES[0];
   };
 
-  const changeHandler = (option: SelectOptionType) => {
+  const changeHandler = (option: SelectOptionType): void => {
     if (option === APPOINTMENT_TIMES[0]) {
       dispatchFilters({
         type: "deletedFilter",

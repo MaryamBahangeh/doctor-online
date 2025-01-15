@@ -32,7 +32,7 @@ function SelectedFilters() {
               className={styles["delete-all"]}
               onClick={deleteAllClickHandler}
             >
-              Delete all
+              Delete
             </button>
           )}
         </div>

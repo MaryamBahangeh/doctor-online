@@ -18,9 +18,9 @@
     gap: 2rem;
     padding-block-start: 4rem;
 
-    .sort {
+    .toolbar {
       grid-area: sort;
-
+      align-items: center;
       display: flex;
       gap: 1rem;
     }

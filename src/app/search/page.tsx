@@ -11,6 +11,7 @@ import { ReactElement } from "react";
 import { FiltersType } from "@/types/filters-type";
 import AppointmentFilter from "@/app/search/components/appointment-filter/AppointmentFilter";
 import Sort from "@/app/search/components/sort/Sort";
+import Stats from "@/app/search/components/stats/Stats";
 
 type SearchParams = { [key: string]: string | string[] | undefined };
 
@@ -36,9 +37,10 @@ export default async function Page({
               <Filter />
             </div>
 
-            <div className={styles.sort}>
+            <div className={styles.toolbar}>
               <Sort />
               <AppointmentFilter />
+              <Stats />
             </div>
 
             <div className={styles.doctors}>{<Doctors />}</div>

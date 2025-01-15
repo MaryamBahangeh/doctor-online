@@ -80,7 +80,7 @@ function DoctorsProvider({ children }: Props) {
       });
       return result.find((x) => !x) == undefined;
     },
-    [filters, doesInclude],
+    [filters, doesInclude, doesSomeInclude],
   );
 
   const filteredDoctors = useMemo(() => {
