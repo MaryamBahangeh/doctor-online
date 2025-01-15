@@ -47,9 +47,10 @@ export default async function Page({
 }
 
 function generateDefaultFilters(searchParams: SearchParams): FiltersType {
-  const { specialityName, serviceTypeName } = searchParams;
-
+  const { specialityName, serviceTypeName, name } = searchParams;
+  console.log(name);
   return {
+    name: normalizeFilter(name),
     specialityName: normalizeFilter(specialityName),
     serviceTypeName: normalizeFilter(serviceTypeName),
   };

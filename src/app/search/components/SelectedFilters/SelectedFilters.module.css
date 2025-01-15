@@ -11,6 +11,9 @@
       outline: none;
       cursor: pointer;
       color: var(--color-danger);
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 

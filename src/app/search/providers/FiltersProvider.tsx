@@ -15,8 +15,6 @@ import {
 
 import { FiltersType } from "@/app/search/types/filters-type";
 
-const filterDefaultValue: FiltersType = {};
-
 type ContextType = {
   filters: FiltersType;
   dispatchFilters: Dispatch<FiltersAction>;
