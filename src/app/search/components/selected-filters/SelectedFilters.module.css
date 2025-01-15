@@ -26,7 +26,8 @@
     .filter {
       border-radius: var(--border-radius);
       border: 0.1rem solid var(--color-primary);
-      font-size: var(--fz-300);
+
+      color: var(--color-gray-30);
       padding: 0.2rem 0.5rem;
 
       display: flex;

@@ -13,6 +13,7 @@ import { SERVICE_TYPE } from "@/options/service-types-options";
 import { FiltersType } from "@/types/filters-type";
 
 import styles from "./Filter.module.css";
+import { object } from "prop-types";
 
 function Filter() {
   const { filters, dispatchFilters } = useContext(FiltersContext);
@@ -27,7 +28,7 @@ function Filter() {
 
   return (
     <div className={styles.filter}>
-      <SelectedFilters />
+      {Object.keys(filters).length > 0 && <SelectedFilters />}
 
       <Card title={"Speciality:"} className={styles.speciality}>
         <ul>

@@ -1,6 +1,6 @@
 .page {
   display: grid;
-  padding-block: 2rem;
+  padding-block-end: 3rem;
 
   .search {
     justify-self: center;

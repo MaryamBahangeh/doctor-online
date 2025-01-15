@@ -15,36 +15,38 @@ function DoctorCard({ doctor }: Props) {
   return (
     <Card>
       <div className={styles["doctor-card"]}>
-        <div className={styles["container"]}>
-          <div className={styles["image-container"]}>
-            <Image
-              className={styles.image}
-              src={doctor.image}
-              alt="doctor image"
-              width={70}
-              height={70}
-            ></Image>
+        <div className={styles.left}>
+          <div className={styles["primary-info"]}>
+            <div className={styles["image-container"]}>
+              <Image
+                className={styles.image}
+                src={doctor.image}
+                alt="doctor image"
+                width={70}
+                height={70}
+              ></Image>
+            </div>
+
+            <div className={styles["doctor-info"]}>
+              <div className={styles.name}>{doctor.name}</div>
+              <div className={styles.description}>{doctor.specialityName}</div>
+              <div className={styles.rate}>
+                <StarBold color={"gold"} /> {doctor.rate}
+                <span> {" (" + doctor.totalVotes + " comments)"}</span>
+              </div>
+            </div>
           </div>
 
-          <div className={styles["doctor-info"]}>
-            <div className={styles.name}>{doctor.name}</div>
-            <div className={styles.description}>{doctor.specialityName}</div>
-            <div className={styles.rate}>
-              <StarBold color={"gold"} /> <span> {doctor.rate}</span>
-              {" (" + doctor.totalVotes + " comments)"}
-            </div>
+          <div className={styles["other-info"]}>
+            <div>{doctor.description}</div>
           </div>
         </div>
 
-        <div className={styles["other-info"]}>
-          <div>{doctor.description}</div>
-          <div className={styles.address}>
-            <MingcuteLocationLine />
-            {doctor.address}
-          </div>
+        <div className={styles.line}></div>
 
+        <div className={styles.right}>
           <div>
-            Service type :{" "}
+            Service type :
             <span className={styles.data}>{doctor.serviceTypeName}</span>
           </div>
 
@@ -53,6 +55,11 @@ function DoctorCard({ doctor }: Props) {
             <span className={styles.data}>
               {doctor.firstAvailableAppointmentLabel}
             </span>
+          </div>
+
+          <div className={styles.address}>
+            <MingcuteLocationLine />
+            {doctor.address}
           </div>
 
           <div className={styles.book}>

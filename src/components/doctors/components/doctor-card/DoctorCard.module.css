@@ -1,46 +1,66 @@
 .doctor-card {
   display: grid;
+  grid-template-columns: 3fr auto 2fr;
   gap: 1rem;
   padding: 0.5rem;
 
-  .container {
-    display: flex;
+  .left {
+    display: grid;
     gap: 1rem;
+    .primary-info {
+      display: flex;
+      gap: 1rem;
 
-    .image-container {
-      .image {
-        border-radius: 99%;
-      }
-    }
-
-    .doctor-info {
-      display: grid;
-      gap: 0.5rem;
-
-      .name {
-        font-size: var(--fz-400);
-        font-weight: 800;
+      .image-container {
+        .image {
+          border-radius: 999rem;
+          border: 0.1rem solid var(--color-blue);
+        }
       }
 
-      .description {
-        color: var(--color-gray-40);
-      }
-
-      .rate {
-        display: flex;
+      .doctor-info {
+        display: grid;
         gap: 0.5rem;
 
-        > span {
-          color: var(--color-blue);
+        .name {
+          font-size: var(--fz-400);
+          font-weight: 800;
+        }
+
+        .description {
+          color: var(--color-gray-40);
+        }
+
+        .rate {
+          display: flex;
+          gap: 0.2rem;
+          align-items: center;
+
+          > span {
+            margin-inline-start: 0.3rem;
+            color: var(--color-blue);
+          }
         }
       }
     }
+
+    .other-info {
+      display: grid;
+      gap: 1rem;
+    }
   }
-  .other-info {
+
+  .line {
+    border: 1px solid var(--color-gray-80);
+  }
+  .right {
     display: grid;
     gap: 1rem;
 
     .address {
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
       color: var(--color-gray-50);
     }
 
@@ -68,10 +88,10 @@
         }
       }
     }
-
-    .data {
-      font-weight: 700;
-      padding-inline-start: 0.5rem;
-    }
   }
+}
+
+.data {
+  font-weight: 700;
+  padding-inline-start: 0.5rem;
 }
