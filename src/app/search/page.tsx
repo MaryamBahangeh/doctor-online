@@ -20,7 +20,7 @@ export default async function Page({
   searchParams,
 }: Props): Promise<ReactElement> {
   const defaultFilters = generateDefaultFilters(await searchParams);
-
+  console.log("defalu" + defaultFilters);
   return (
     <FiltersProvider defaultFilters={defaultFilters}>
       <DoctorsProvider>

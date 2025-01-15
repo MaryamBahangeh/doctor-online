@@ -1,5 +1,3 @@
-import { FiltersType } from "@/app/search/types/filters-type";
-
 export const SPECIALITY_OPTIONS = [
   { key: "Gynecologist", value: "1" },
   { key: "Cardiologist", value: "2" },

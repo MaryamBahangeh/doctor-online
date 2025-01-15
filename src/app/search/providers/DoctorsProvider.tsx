@@ -40,7 +40,7 @@ function DoctorsProvider({ children }: Props) {
     if (filters[filterName] === "") {
       return true;
     }
-
+    console.log("name" + filters[filterName]);
     return (
       doctor.name
         .toLowerCase()
@@ -49,9 +49,6 @@ function DoctorsProvider({ children }: Props) {
         .toLowerCase()
         .includes((filters[filterName] as string).toLowerCase()) ||
       doctor.specialityName
-        .toLowerCase()
-        .includes((filters[filterName] as string).toLowerCase()) ||
-      doctor.description
         .toLowerCase()
         .includes((filters[filterName] as string).toLowerCase())
     );
