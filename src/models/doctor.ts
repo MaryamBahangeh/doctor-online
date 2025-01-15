@@ -7,7 +7,8 @@ export type DoctorModel = {
   rate: number;
   totalVotes: number;
   address: string;
-  firstAvailableAppointment: string;
+  firstAvailableAppointmentValue: string;
+  firstAvailableAppointmentLabel: string;
   specialityId: string;
   specialityName: string;
   description: string;

@@ -8,7 +8,9 @@ import DoctorsProvider from "@/app/search/providers/DoctorsProvider";
 
 import styles from "./page.module.css";
 import { ReactElement } from "react";
-import { FiltersType } from "@/app/search/types/filters-type";
+import { FiltersType } from "@/types/filters-type";
+import AppointmentFilter from "@/app/search/components/appointment-filter/AppointmentFilter";
+import Sort from "@/app/search/components/sort/Sort";
 
 type SearchParams = { [key: string]: string | string[] | undefined };
 
@@ -20,7 +22,7 @@ export default async function Page({
   searchParams,
 }: Props): Promise<ReactElement> {
   const defaultFilters = generateDefaultFilters(await searchParams);
-  console.log("defalu" + defaultFilters);
+
   return (
     <FiltersProvider defaultFilters={defaultFilters}>
       <DoctorsProvider>
@@ -35,7 +37,8 @@ export default async function Page({
             </div>
 
             <div className={styles.sort}>
-              <Card />
+              <Sort />
+              <AppointmentFilter />
             </div>
 
             <div className={styles.doctors}>{<Doctors />}</div>
@@ -48,7 +51,7 @@ export default async function Page({
 
 function generateDefaultFilters(searchParams: SearchParams): FiltersType {
   const { specialityName, serviceTypeName, name } = searchParams;
-  console.log(name);
+
   return {
     name: normalizeFilter(name),
     specialityName: normalizeFilter(specialityName),

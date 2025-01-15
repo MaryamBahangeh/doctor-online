@@ -51,7 +51,7 @@ function DoctorCard({ doctor }: Props) {
           <div>
             First available appointment :
             <span className={styles.data}>
-              {doctor.firstAvailableAppointment}
+              {doctor.firstAvailableAppointmentLabel}
             </span>
           </div>
 

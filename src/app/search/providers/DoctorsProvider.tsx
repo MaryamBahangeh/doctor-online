@@ -1,30 +1,40 @@
 "use client";
 import React, {
   createContext,
+  Dispatch,
   PropsWithChildren,
+  SetStateAction,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
+  useState,
 } from "react";
 
 import { FiltersContext } from "@/app/search/providers/FiltersProvider";
 
 import { DoctorModel } from "@/models/doctor";
 import { doctors } from "@/assests/doctors";
-import { FiltersType } from "@/app/search/types/filters-type";
+import { FiltersType } from "@/types/filters-type";
+import { SORT_OPTIONS } from "@/options/sort-options";
 
 type ContextType = {
-  filteredDoctors: DoctorModel[];
+  sortedDoctors: DoctorModel[];
+  sortBy: string;
+  setSortBy: Dispatch<SetStateAction<string>>;
 };
 
 export const DoctorsContext = createContext<ContextType>({
-  filteredDoctors: [],
+  sortedDoctors: [],
+  sortBy: "",
+  setSortBy: () => {},
 });
 
 type Props = PropsWithChildren;
 
 function DoctorsProvider({ children }: Props) {
   const { filters } = useContext(FiltersContext);
+  const [sortBy, setSortBy] = useState<string>(SORT_OPTIONS[0].value);
 
   const doesInclude = (
     filterName: keyof FiltersType,
@@ -40,7 +50,7 @@ function DoctorsProvider({ children }: Props) {
     if (filters[filterName] === "") {
       return true;
     }
-    console.log("name" + filters[filterName]);
+
     return (
       doctor.name
         .toLowerCase()
@@ -77,8 +87,26 @@ function DoctorsProvider({ children }: Props) {
     return doctors.filter((doctor: DoctorModel) => isActiveDoctor(doctor));
   }, [isActiveDoctor]);
 
+  const sortedDoctors = useMemo(() => {
+    if (sortBy === "rating") {
+      return [...filteredDoctors].sort((a, b) => b.rate - a.rate);
+    }
+    if (sortBy === "appointment") {
+      return [...filteredDoctors].sort((a, b) =>
+        a.firstAvailableAppointmentValue.localeCompare(
+          b.firstAvailableAppointmentValue,
+        ),
+      );
+    }
+    if (sortBy === "popularity") {
+      return [...filteredDoctors].sort((a, b) => b.totalVotes - a.totalVotes);
+    }
+
+    return [...filteredDoctors];
+  }, [filteredDoctors, sortBy]);
+
   return (
-    <DoctorsContext.Provider value={{ filteredDoctors }}>
+    <DoctorsContext.Provider value={{ sortedDoctors, sortBy, setSortBy }}>
       {children}
     </DoctorsContext.Provider>
   );

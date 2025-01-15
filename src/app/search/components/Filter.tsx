@@ -3,13 +3,13 @@
 import { useContext } from "react";
 
 import { FiltersContext } from "@/app/search/providers/FiltersProvider";
-import SelectedFilters from "@/app/search/components/SelectedFilters/SelectedFilters";
+import SelectedFilters from "@/app/search/components/selected-filters/SelectedFilters";
 import Card from "@/components/card/Card";
 
 import { SPECIALITY_OPTIONS } from "@/options/speciality-options";
 
 import styles from "./Filter.module.css";
-import { FiltersType } from "@/app/search/types/filters-type";
+import { FiltersType } from "@/types/filters-type";
 import { SERVICE_TYPE } from "@/options/service-types-options";
 
 function Filter() {

@@ -13,7 +13,7 @@ import {
   FiltersAction,
 } from "@/app/search/reducers/FiltersReducer";
 
-import { FiltersType } from "@/app/search/types/filters-type";
+import { FiltersType } from "@/types/filters-type";
 
 type ContextType = {
   filters: FiltersType;

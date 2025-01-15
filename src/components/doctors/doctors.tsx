@@ -8,10 +8,10 @@ import DoctorCard from "@/components/doctors/components/doctor-card/DoctorCard";
 import styles from "./doctors.module.css";
 
 function Doctors() {
-  const { filteredDoctors } = useContext(DoctorsContext);
+  const { sortedDoctors } = useContext(DoctorsContext);
   return (
     <div className={styles.doctors}>
-      {filteredDoctors.map((doctor) => (
+      {sortedDoctors.map((doctor) => (
         <DoctorCard key={doctor.id} doctor={doctor} />
       ))}
     </div>

@@ -1,4 +1,4 @@
-import { FiltersType } from "@/app/search/types/filters-type";
+import { FiltersType } from "@/types/filters-type";
 
 export type FiltersAction =
   | {

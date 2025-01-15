@@ -1,5 +1,8 @@
 :root {
+  --color-gray-99: hsl(200deg 10% 99%);
   --color-gray-98: hsl(0deg 0% 98%);
+  --color-gray-97: hsl(200deg 10% 97%);
+  --color-gray-93: hsl(200deg 10% 93%);
   --color-gray-90: hsl(0deg 0% 90%);
   --color-gray-80: hsl(0deg 0% 80%);
   --color-gray-70: hsl(0deg 0% 70%);
@@ -18,12 +21,27 @@
   --color-default-background: var(--color-gray-10);
   --color-default-foreground: var(--color-gray-98);
 
+  --color-surface-300: hsl(283, 68%, 80%);
+  --color-surface-400: var(--color-gray-97);
+  --color-surface-700: var(--color-gray-99);
+
   --color-primary: hsl(283, 94%, 50%);
   --color-primary-fade: hsl(120deg 50% 96%);
   --color-primary-lighter: hsl(283, 94%, 55%);
   --color-primary-darker: hsl(283, 94%, 45%);
 
   --color-primary-opposite: var(--color-gray-10);
+
+  --color-border: var(--color-gray-80);
+
+  --shadow-300: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-400: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-500: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-700: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-800: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-900: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 
   --border-radius: 0.875rem;
 

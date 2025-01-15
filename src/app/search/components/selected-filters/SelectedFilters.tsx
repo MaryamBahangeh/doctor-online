@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import { FiltersContext } from "@/app/search/providers/FiltersProvider";
 import Card from "@/components/card/Card";
 import styles from "./SelectedFilters.module.css";
-import { FiltersType } from "@/app/search/types/filters-type";
+import { FiltersType } from "@/types/filters-type";
 import SolarTrashBinMinimalistic2Bold from "@/icons/SolarTrashBinMinimalistic2Bold";
 
 function SelectedFilters() {
@@ -32,7 +32,7 @@ function SelectedFilters() {
               className={styles["delete-all"]}
               onClick={deleteAllClickHandler}
             >
-              Delete All
+              Delete all
             </button>
           )}
         </div>

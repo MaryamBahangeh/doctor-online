@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <h1>
-        <DoctorOnlineLogo></DoctorOnlineLogo>
+        <DoctorOnlineLogo />
         Doctor Online
       </h1>
 
-      <GlobalSearchBox></GlobalSearchBox>
+      <GlobalSearchBox />
 
       <div className={styles.history}>
         <div>Recent search</div>
