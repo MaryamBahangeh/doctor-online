@@ -32,6 +32,7 @@ export const filtersReducer = (
     case "deletedAllFilters": {
       return {};
     }
+
     default: {
       throw Error("Unknown action");
     }

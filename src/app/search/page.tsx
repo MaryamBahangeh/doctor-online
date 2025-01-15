@@ -1,17 +1,19 @@
-import GlobalSearchBox from "@/components/global-search-box/GlobalSearchBox";
-import Card from "@/components/card/Card";
-import Doctors from "@/components/doctors/doctors";
+import { ReactElement } from "react";
 
-import Filter from "@/app/search/components/Filter";
 import FiltersProvider from "@/app/search/providers/FiltersProvider";
 import DoctorsProvider from "@/app/search/providers/DoctorsProvider";
 
-import styles from "./page.module.css";
-import { ReactElement } from "react";
-import { FiltersType } from "@/types/filters-type";
+import GlobalSearchBox from "@/components/global-search-box/GlobalSearchBox";
+import Doctors from "@/components/doctors/doctors";
+
+import Filter from "@/app/search/components/Filter";
 import AppointmentFilter from "@/app/search/components/appointment-filter/AppointmentFilter";
 import Sort from "@/app/search/components/sort/Sort";
 import Stats from "@/app/search/components/stats/Stats";
+
+import { FiltersType } from "@/types/filters-type";
+
+import styles from "./page.module.css";
 
 type SearchParams = { [key: string]: string | string[] | undefined };
 

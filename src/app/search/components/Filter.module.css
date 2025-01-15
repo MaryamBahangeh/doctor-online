@@ -8,7 +8,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: var(--color-primary-lighter);
+      background-color: var(--color-surface-300);
     }
   }
 

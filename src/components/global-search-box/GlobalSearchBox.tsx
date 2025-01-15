@@ -41,6 +41,7 @@ function GlobalSearchBox() {
     <form className={styles["search-box"]} onSubmit={onsubmitHandler}>
       <div className={styles["input-container"]}>
         <MingcuteSearchLine className={styles.prefix}></MingcuteSearchLine>
+
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
