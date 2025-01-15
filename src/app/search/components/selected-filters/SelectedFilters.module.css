@@ -11,6 +11,7 @@
       outline: none;
       cursor: pointer;
       color: var(--color-danger);
+
       &:hover {
         text-decoration: underline;
       }
@@ -36,9 +37,11 @@
         border: none;
         background-color: transparent;
         appearance: none;
+
         > * {
           color: var(--color-danger);
         }
+
         &:hover {
           cursor: pointer;
         }

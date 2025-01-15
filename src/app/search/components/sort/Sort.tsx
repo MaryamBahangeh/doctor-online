@@ -2,11 +2,11 @@
 
 import React, { useContext, useState } from "react";
 
+import { DoctorsContext } from "@/app/search/providers/DoctorsProvider";
+
 import SelectComponent from "@/components/select/SelectComponent";
 import { SelectOptionType } from "@/types/select-option-type";
 import { SORT_OPTIONS } from "@/options/sort-options";
-import { FiltersContext } from "@/app/search/providers/FiltersProvider";
-import { DoctorsContext } from "@/app/search/providers/DoctorsProvider";
 
 function Sort() {
   const { sortBy, setSortBy } = useContext(DoctorsContext);

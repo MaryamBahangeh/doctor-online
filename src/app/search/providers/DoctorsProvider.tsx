@@ -1,4 +1,5 @@
 "use client";
+
 import React, {
   createContext,
   Dispatch,
@@ -46,7 +47,7 @@ function DoctorsProvider({ children }: Props) {
   const doesSomeInclude = (
     filterName: keyof FiltersType,
     doctor: DoctorModel,
-  ) => {
+  ): boolean => {
     if (filters[filterName] === "") {
       return true;
     }
@@ -71,6 +72,7 @@ function DoctorsProvider({ children }: Props) {
       ) as (keyof FiltersType)[];
 
       const result: boolean[] = [];
+
       keyValues.map((key) => {
         if (key === "name") {
           result.push(doesSomeInclude(key, doctor));
@@ -78,32 +80,34 @@ function DoctorsProvider({ children }: Props) {
           result.push(doesInclude(key, doctor));
         }
       });
+
       return result.find((x) => !x) == undefined;
     },
     [filters, doesInclude, doesSomeInclude],
   );
 
-  const filteredDoctors = useMemo(() => {
-    return doctors.filter((doctor: DoctorModel) => isActiveDoctor(doctor));
-  }, [isActiveDoctor]);
+  const sortedDoctors = useMemo((): DoctorModel[] => {
+    const filteredDoctors = (): DoctorModel[] =>
+      doctors.filter((doctor: DoctorModel) => isActiveDoctor(doctor));
 
-  const sortedDoctors = useMemo(() => {
     if (sortBy === "rating") {
-      return [...filteredDoctors].sort((a, b) => b.rate - a.rate);
+      return filteredDoctors().sort((a, b) => b.rate - a.rate);
     }
+
     if (sortBy === "appointment") {
-      return [...filteredDoctors].sort((a, b) =>
+      return filteredDoctors().sort((a, b) =>
         a.firstAvailableAppointmentValue.localeCompare(
           b.firstAvailableAppointmentValue,
         ),
       );
     }
+
     if (sortBy === "popularity") {
-      return [...filteredDoctors].sort((a, b) => b.totalVotes - a.totalVotes);
+      return filteredDoctors().sort((a, b) => b.totalVotes - a.totalVotes);
     }
 
-    return [...filteredDoctors];
-  }, [filteredDoctors, sortBy]);
+    return filteredDoctors();
+  }, [sortBy, isActiveDoctor]);
 
   return (
     <DoctorsContext.Provider value={{ sortedDoctors, sortBy, setSortBy }}>

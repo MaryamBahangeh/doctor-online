@@ -11,21 +11,23 @@
       background-color: var(--color-primary-lighter);
     }
   }
+
   .speciality {
     block-size: 25rem;
     overflow-y: auto;
   }
+
   .selected {
     background-color: var(--color-primary);
   }
 
   .radio-list {
+    display: flex;
+    gap: 0.3rem;
+
     input {
       outline: none;
       border: none;
     }
-
-    display: flex;
-    gap: 0.3rem;
   }
 }

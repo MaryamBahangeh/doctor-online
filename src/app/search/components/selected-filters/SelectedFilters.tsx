@@ -1,20 +1,23 @@
 "use client";
 
 import React, { useContext } from "react";
+
 import { FiltersContext } from "@/app/search/providers/FiltersProvider";
+
 import Card from "@/components/card/Card";
-import styles from "./SelectedFilters.module.css";
 import { FiltersType } from "@/types/filters-type";
 import SolarTrashBinMinimalistic2Bold from "@/icons/SolarTrashBinMinimalistic2Bold";
+
+import styles from "./SelectedFilters.module.css";
 
 function SelectedFilters() {
   const { dispatchFilters, filters } = useContext(FiltersContext);
 
-  const deleteAllClickHandler = () => {
+  const deleteAllClickHandler = (): void => {
     dispatchFilters({ type: "deletedAllFilters" });
   };
 
-  const deleteClickHandler = (key: keyof FiltersType) => {
+  const deleteClickHandler = (key: keyof FiltersType): void => {
     dispatchFilters({ type: "deletedFilter", key });
   };
 
@@ -36,6 +39,7 @@ function SelectedFilters() {
             </button>
           )}
         </div>
+
         <div className={styles["filters"]}>
           {keyValues.map((key) => (
             <div className={styles.filter} key={key}>

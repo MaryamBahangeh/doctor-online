@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useContext, useState } from "react";
+import { FormEvent, useContext, useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
 import { FiltersContext } from "@/app/search/providers/FiltersProvider";
@@ -11,7 +11,7 @@ import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
 import styles from "./GlobalSearchBox.module.css";
 
 function GlobalSearchBox() {
-  const { dispatchFilters } = useContext(FiltersContext);
+  const { filters, dispatchFilters } = useContext(FiltersContext);
 
   const router = useRouter();
   const pathname = usePathname();
@@ -20,6 +20,7 @@ function GlobalSearchBox() {
 
   const onsubmitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (pathname === "/search") {
       if (query) {
         dispatchFilters({ type: "filtered", key: "name", value: query });
@@ -31,6 +32,10 @@ function GlobalSearchBox() {
       router.push(href);
     }
   };
+
+  useEffect(() => {
+    if (!filters.name) setQuery("");
+  }, [filters]);
 
   return (
     <form className={styles["search-box"]} onSubmit={onsubmitHandler}>

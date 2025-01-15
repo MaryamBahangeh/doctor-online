@@ -3,19 +3,21 @@
 import { useContext } from "react";
 
 import { FiltersContext } from "@/app/search/providers/FiltersProvider";
+
 import SelectedFilters from "@/app/search/components/selected-filters/SelectedFilters";
 import Card from "@/components/card/Card";
 
 import { SPECIALITY_OPTIONS } from "@/options/speciality-options";
+import { SERVICE_TYPE } from "@/options/service-types-options";
+
+import { FiltersType } from "@/types/filters-type";
 
 import styles from "./Filter.module.css";
-import { FiltersType } from "@/types/filters-type";
-import { SERVICE_TYPE } from "@/options/service-types-options";
 
 function Filter() {
   const { filters, dispatchFilters } = useContext(FiltersContext);
 
-  const filter = (value: string, filterType: keyof FiltersType) => {
+  const filter = (value: string, filterType: keyof FiltersType): void => {
     dispatchFilters({
       type: "filtered",
       key: filterType,
@@ -26,6 +28,7 @@ function Filter() {
   return (
     <div className={styles.filter}>
       <SelectedFilters />
+
       <Card title={"Speciality:"} className={styles.speciality}>
         <ul>
           {SPECIALITY_OPTIONS.map((option) => (
