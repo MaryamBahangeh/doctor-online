@@ -4,7 +4,6 @@ import React, { useContext } from "react";
 import { FiltersContext } from "@/app/search/providers/FiltersProvider";
 import Card from "@/components/card/Card";
 import styles from "./SelectedFilters.module.css";
-import filter from "@/app/search/components/Filter";
 import { FiltersType } from "@/app/search/types/filters-type";
 import SolarTrashBinMinimalistic2Bold from "@/icons/SolarTrashBinMinimalistic2Bold";
 
