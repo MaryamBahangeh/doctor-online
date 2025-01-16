@@ -8,8 +8,6 @@ import SelectedFilters from "@/app/search/components/selected-filters/SelectedFi
 
 import { SPECIALITY_OPTIONS } from "@/options/speciality-options";
 
-import { FiltersType } from "@/types/filters-type";
-
 import styles from "./Filter.module.css";
 
 import FilterItems, {
@@ -20,7 +18,7 @@ import { SPECIALITY_DEGREE } from "@/options/degree-options";
 import { SERVICE_TYPE } from "@/options/service-types-options";
 
 function Filter() {
-  const { filters, dispatchFilters } = useContext(FiltersContext);
+  const { filters } = useContext(FiltersContext);
 
   return (
     <div className={styles.filter}>
