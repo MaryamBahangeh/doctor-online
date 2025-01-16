@@ -15,6 +15,7 @@ import styles from "./Filter.module.css";
 import FilterItems, {
   FILTER_VARIANT,
 } from "@/app/search/components/filter-items/FilterItems";
+
 import { SPECIALITY_DEGREE } from "@/options/degree-options";
 import { SERVICE_TYPE } from "@/options/service-types-options";
 
@@ -52,22 +53,6 @@ function Filter() {
         options={SERVICE_TYPE}
         fieldName="serviceTypeName"
       />
-
-      {/*<Card title={"Service type:"}>*/}
-      {/*  {SERVICE_TYPE.map((option) => (*/}
-      {/*    <div key={option.value} className={styles["radio-list"]}>*/}
-      {/*      <input*/}
-      {/*        type="radio"*/}
-      {/*        id={option.label}*/}
-      {/*        name={option.label}*/}
-      {/*        value={option.value}*/}
-      {/*        checked={filters["serviceTypeName"] === option.label}*/}
-      {/*        onChange={() => filter(option.label, "serviceTypeName")}*/}
-      {/*      />*/}
-      {/*      <label htmlFor={option.label}>{option.label}</label>*/}
-      {/*    </div>*/}
-      {/*  ))}*/}
-      {/*</Card>*/}
     </div>
   );
 }

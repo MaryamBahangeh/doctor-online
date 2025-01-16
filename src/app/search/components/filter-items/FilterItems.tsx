@@ -1,14 +1,17 @@
 import React, { useContext } from "react";
-import styles from "./FilterItems.module.css";
-import Card from "@/components/card/Card";
 import { FiltersContext } from "@/app/search/providers/FiltersProvider";
+
+import Card from "@/components/card/Card";
 import { FiltersType } from "@/types/filters-type";
 import { SelectOptionType } from "@/types/select-option-type";
+
+import styles from "./FilterItems.module.css";
 
 export enum FILTER_VARIANT {
   list = "list",
   radio = "radio",
 }
+
 type Props = {
   filterVariant: FILTER_VARIANT;
   title: string;
@@ -18,6 +21,7 @@ type Props = {
 
 function FilterItems({ filterVariant, title, options, fieldName }: Props) {
   const { filters, dispatchFilters } = useContext(FiltersContext);
+
   const filter = (value: string, filterType: keyof FiltersType): void => {
     dispatchFilters({
       type: "filtered",
@@ -25,12 +29,13 @@ function FilterItems({ filterVariant, title, options, fieldName }: Props) {
       value: value,
     });
   };
+
   return (
     <div className={styles["filter-items"]}>
       <Card title={title} className={styles.items}>
         <ul>
-          {options.map((option) => {
-            return (
+          {options.map(
+            (option) =>
               (filterVariant === FILTER_VARIANT.list && (
                 <li
                   key={option.label}
@@ -57,9 +62,8 @@ function FilterItems({ filterVariant, title, options, fieldName }: Props) {
                   />
                   <label htmlFor={option.label}>{option.label}</label>
                 </div>
-              ))
-            );
-          })}
+              )),
+          )}
         </ul>
       </Card>
     </div>
