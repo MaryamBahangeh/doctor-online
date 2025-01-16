@@ -36,33 +36,33 @@ function DoctorsProvider({ children }: Props) {
   const { filters } = useContext(FiltersContext);
   const [sortBy, setSortBy] = useState<string>(SORT_OPTIONS[0].value);
 
-  const doesInclude = (
-    filterName: keyof FiltersType,
-    doctor: DoctorModel,
-  ): boolean => {
-    return doctor[filterName] === filters[filterName];
-  };
+  const doesInclude = useCallback(
+    (filterName: keyof FiltersType, doctor: DoctorModel): boolean => {
+      return doctor[filterName] === filters[filterName];
+    },
+    [filters],
+  );
 
-  const doesSomeInclude = (
-    filterName: keyof FiltersType,
-    doctor: DoctorModel,
-  ): boolean => {
-    if (filters[filterName] === "") {
-      return true;
-    }
+  const doesSomeInclude = useCallback(
+    (filterName: keyof FiltersType, doctor: DoctorModel): boolean => {
+      if (filters[filterName] === "") {
+        return true;
+      }
 
-    return (
-      doctor.name
-        .toLowerCase()
-        .includes((filters[filterName] as string).toLowerCase()) ||
-      doctor.address
-        .toLowerCase()
-        .includes((filters[filterName] as string).toLowerCase()) ||
-      doctor.specialityName
-        .toLowerCase()
-        .includes((filters[filterName] as string).toLowerCase())
-    );
-  };
+      return (
+        doctor.name
+          .toLowerCase()
+          .includes((filters[filterName] as string).toLowerCase()) ||
+        doctor.address
+          .toLowerCase()
+          .includes((filters[filterName] as string).toLowerCase()) ||
+        doctor.specialityName
+          .toLowerCase()
+          .includes((filters[filterName] as string).toLowerCase())
+      );
+    },
+    [filters],
+  );
 
   const isActiveDoctor = useCallback(
     (doctor: DoctorModel): boolean => {
