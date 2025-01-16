@@ -252,7 +252,7 @@ export const doctors: DoctorModel[] = [
     name: "Atlas Sierra",
     serviceType: SERVICE_TYPE[0].value,
     serviceTypeName: SERVICE_TYPE[0].label,
-    image: jack.src,
+    image: lukas.src,
     rate: 3.7,
     totalVotes: 9814,
     address: "Belgian",
