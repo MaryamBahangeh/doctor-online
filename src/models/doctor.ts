@@ -12,4 +12,6 @@ export type DoctorModel = {
   specialityId: string;
   specialityName: string;
   description: string;
+  specialtyDegreeId: string;
+  specialtyDegreeName: string;
 };

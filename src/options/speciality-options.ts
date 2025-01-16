@@ -1,9 +1,11 @@
-export const SPECIALITY_OPTIONS = [
-  { key: "Gynecologist", value: "1" },
-  { key: "Cardiologist", value: "2" },
-  { key: "Neonatologist", value: "3" },
-  { key: "Pulmonologist ", value: "4" },
-  { key: "Gastroenterologist", value: "5" },
-  { key: "Cosmetologist", value: "6" },
-  { key: "Dermatologist", value: "7" },
+import { SelectOptionType } from "@/types/select-option-type";
+
+export const SPECIALITY_OPTIONS: SelectOptionType[] = [
+  { label: "Gynecologist", value: "1" },
+  { label: "Cardiologist", value: "2" },
+  { label: "Neonatologist", value: "3" },
+  { label: "Pulmonologist ", value: "4" },
+  { label: "Gastroenterologist", value: "5" },
+  { label: "Cosmetologist", value: "6" },
+  { label: "Dermatologist", value: "7" },
 ];

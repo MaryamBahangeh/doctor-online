@@ -3,4 +3,5 @@ export type FiltersType = {
   serviceTypeName?: string;
   name?: string;
   firstAvailableAppointmentLabel?: string;
+  specialtyDegreeName?: string;
 };

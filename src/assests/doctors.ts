@@ -8,13 +8,14 @@ import mateo from "@/assests/doctors-images/mateo.jpg";
 import martin from "@/assests/doctors-images/martin.jpg";
 import { SERVICE_TYPE } from "@/options/service-types-options";
 import { APPOINTMENT_TIMES } from "@/options/appointment-time-options";
+import { SPECIALITY_DEGREE } from "@/options/degree-options";
 
 export const doctors: DoctorModel[] = [
   {
     id: "97420f0d-b576-4f65-9ffc-a81b4b1b4e77",
     name: "Sara Smith",
-    serviceType: SERVICE_TYPE[0].key,
-    serviceTypeName: SERVICE_TYPE[0].key,
+    serviceType: SERVICE_TYPE[0].value,
+    serviceTypeName: SERVICE_TYPE[0].label,
     image: sara.src,
     rate: 4.99,
     totalVotes: 594,
@@ -25,12 +26,14 @@ export const doctors: DoctorModel[] = [
     specialityName: "Gynecologist",
     description:
       "Diagnosing and treating conditions of the female reproductive system",
+    specialtyDegreeName: SPECIALITY_DEGREE[0].label,
+    specialtyDegreeId: SPECIALITY_DEGREE[0].value,
   },
   {
     id: "88820f0d-b576-9ffc-a81b4b1b4e7",
     name: "John William",
-    serviceType: SERVICE_TYPE[1].key,
-    serviceTypeName: SERVICE_TYPE[1].key,
+    serviceType: SERVICE_TYPE[1].value,
+    serviceTypeName: SERVICE_TYPE[1].label,
     image: john.src,
     rate: 2.8,
     totalVotes: 294,
@@ -40,12 +43,14 @@ export const doctors: DoctorModel[] = [
     specialityId: "2",
     specialityName: "Cardiologist",
     description: "Expert in the care of your heart and blood vessels",
+    specialtyDegreeName: SPECIALITY_DEGREE[1].label,
+    specialtyDegreeId: SPECIALITY_DEGREE[1].value,
   },
   {
     id: "88820f0d-b576-335-9ffc-a81b1b4e7",
     name: "Mary Brown",
-    serviceType: SERVICE_TYPE[0].key,
-    serviceTypeName: SERVICE_TYPE[0].key,
+    serviceType: SERVICE_TYPE[0].value,
+    serviceTypeName: SERVICE_TYPE[0].label,
     image: mary.src,
     rate: 3.79,
     totalVotes: 894,
@@ -55,12 +60,14 @@ export const doctors: DoctorModel[] = [
     specialityId: "3",
     specialityName: "Neonatologist",
     description: "caring for newborn and premature babies",
+    specialtyDegreeName: SPECIALITY_DEGREE[0].label,
+    specialtyDegreeId: SPECIALITY_DEGREE[0].value,
   },
   {
     id: "8882000f0d-b576-335-9ffc-a81b4b1b4e7",
     name: "Jack Davis",
     serviceType: SERVICE_TYPE[1].value,
-    serviceTypeName: SERVICE_TYPE[1].key,
+    serviceTypeName: SERVICE_TYPE[1].label,
     image: jack.src,
     rate: 2.99,
     totalVotes: 2014,
@@ -71,12 +78,14 @@ export const doctors: DoctorModel[] = [
     specialityName: "Pulmonologist ",
     description:
       "Diagnosing and treating diseases of the respiratory system, including airways, alveoli and blood vessels",
+    specialtyDegreeName: SPECIALITY_DEGREE[3].label,
+    specialtyDegreeId: SPECIALITY_DEGREE[3].value,
   },
   {
     id: "97420f0d-b576-4f65-fc-a81b4b1b4e77",
     name: "Mateo Miller",
     serviceType: SERVICE_TYPE[1].value,
-    serviceTypeName: SERVICE_TYPE[1].key,
+    serviceTypeName: SERVICE_TYPE[1].label,
     image: mateo.src,
     rate: 4.25,
     totalVotes: 1594,
@@ -87,18 +96,22 @@ export const doctors: DoctorModel[] = [
     specialityName: "Gastroenterologist",
     description:
       "Diagnosing and treating conditions of the female reproductive system",
+    specialtyDegreeName: SPECIALITY_DEGREE[0].label,
+    specialtyDegreeId: SPECIALITY_DEGREE[0].value,
   },
   {
     id: "88820f0d-76-9ffc-a81b4b1b4e7",
     name: "Martin Anderson",
     serviceType: SERVICE_TYPE[0].value,
-    serviceTypeName: SERVICE_TYPE[0].key,
+    serviceTypeName: SERVICE_TYPE[0].label,
     image: martin.src,
     rate: 3.99,
     totalVotes: 1204,
     address: "Netherlands",
     firstAvailableAppointmentValue: APPOINTMENT_TIMES[3].value,
     firstAvailableAppointmentLabel: APPOINTMENT_TIMES[3].label,
+    specialtyDegreeName: SPECIALITY_DEGREE[1].label,
+    specialtyDegreeId: SPECIALITY_DEGREE[1].value,
 
     specialityId: "6",
     specialityName: "Cosmetologist",
@@ -108,7 +121,7 @@ export const doctors: DoctorModel[] = [
     id: "88820f0d-b576-335ffc-a81b1b4e7",
     name: "Mary Taylor",
     serviceType: SERVICE_TYPE[0].value,
-    serviceTypeName: SERVICE_TYPE[0].key,
+    serviceTypeName: SERVICE_TYPE[0].label,
     image: mary.src,
     rate: 4.99,
     totalVotes: 834,
@@ -118,12 +131,14 @@ export const doctors: DoctorModel[] = [
     specialityId: "6",
     specialityName: "Cosmetologist",
     description: "caring for newborn and premature babies",
+    specialtyDegreeName: SPECIALITY_DEGREE[2].label,
+    specialtyDegreeId: SPECIALITY_DEGREE[2].value,
   },
   {
     id: "8882000f-b576-335-9ffc-a81b4b1b4e7",
     name: "Jack Clark",
     serviceType: SERVICE_TYPE[1].value,
-    serviceTypeName: SERVICE_TYPE[1].key,
+    serviceTypeName: SERVICE_TYPE[1].label,
     image: jack.src,
     rate: 5,
     totalVotes: 5014,
@@ -134,5 +149,7 @@ export const doctors: DoctorModel[] = [
     specialityName: "Gynecologist ",
     description:
       "Diagnosing and treating diseases of the respiratory system, including airways, alveoli and blood vessels",
+    specialtyDegreeName: SPECIALITY_DEGREE[1].label,
+    specialtyDegreeId: SPECIALITY_DEGREE[1].value,
   },
 ];
