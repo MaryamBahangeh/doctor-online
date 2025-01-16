@@ -123,7 +123,7 @@ export const doctors: DoctorModel[] = [
     description: "Expert in the care of your heart and blood vessels",
   },
   {
-    id: "88820f0d-b576-335ffc-a81b1b4e7",
+    id: "88820f-b576-335ffc-a81b1b4e7",
     name: "Mary Taylor",
     serviceType: SERVICE_TYPE[0].value,
     serviceTypeName: SERVICE_TYPE[0].label,
@@ -161,8 +161,8 @@ export const doctors: DoctorModel[] = [
   {
     id: "97420f0d-b576-4f6-a81b4b1b4e77",
     name: "Amaris Davenport",
-    serviceType: SERVICE_TYPE[0].value,
-    serviceTypeName: SERVICE_TYPE[0].label,
+    serviceType: SERVICE_TYPE[1].value,
+    serviceTypeName: SERVICE_TYPE[1].label,
     image: amaris.src,
     rate: 3.99,
     totalVotes: 1094,
@@ -271,7 +271,7 @@ export const doctors: DoctorModel[] = [
     name: "Abner Duran",
     serviceType: SERVICE_TYPE[0].value,
     serviceTypeName: SERVICE_TYPE[0].label,
-    image: amaris.src,
+    image: jack.src,
     rate: 2.56,
     totalVotes: 7940,
     address: "England",
