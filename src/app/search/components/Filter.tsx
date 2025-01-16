@@ -22,14 +22,6 @@ import { SERVICE_TYPE } from "@/options/service-types-options";
 function Filter() {
   const { filters, dispatchFilters } = useContext(FiltersContext);
 
-  const filter = (value: string, filterType: keyof FiltersType): void => {
-    dispatchFilters({
-      type: "filtered",
-      key: filterType,
-      value: value,
-    });
-  };
-
   return (
     <div className={styles.filter}>
       {Object.keys(filters).length > 0 && <SelectedFilters />}
