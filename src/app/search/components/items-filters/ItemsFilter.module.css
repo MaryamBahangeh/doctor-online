@@ -1,0 +1,38 @@
+.items-filter {
+  max-block-size: 20rem;
+  overflow: auto;
+  scrollbar-width: thin;
+
+  ul {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  button {
+    text-align: start;
+  }
+
+  .selected {
+    background-color: var(--color-primary);
+    color: var(--color-gray-99);
+
+    &:hover {
+      background-color: var(--color-primary);
+    }
+  }
+
+  .radio-list {
+    display: flex;
+    gap: 0.5rem;
+
+    input {
+      outline: none;
+      border: none;
+    }
+
+    input,
+    label:hover {
+      cursor: pointer;
+    }
+  }
+}

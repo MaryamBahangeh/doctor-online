@@ -1,0 +1,59 @@
+.general {
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+
+  text-decoration: none;
+
+  &.solid {
+    border: 0.1rem solid var(--color-primary);
+
+    inline-size: 15rem;
+    min-inline-size: min(15rem, 100%);
+
+    font-weight: 700;
+
+    &:hover {
+      background-color: var(--color-primary-lighter);
+      cursor: pointer;
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    color: var(--color-primary);
+
+    border: 0.1rem solid var(--color-primary);
+
+    font-weight: 700;
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: var(--color-primary-opposite);
+    }
+  }
+
+  &.text {
+    background-color: transparent;
+    padding: 0.5rem 0.5rem;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-surface-300);
+    }
+  }
+
+  &.primary {
+    background-color: var(--color-primary);
+    color: var(--color-primary-opposite);
+  }
+
+  &.danger {
+    background-color: var(--color-danger);
+    color: var(--color-gray-99);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -5,12 +5,13 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 import styles from "./Header.module.css";
+import Button, { Variant } from "@/components/Button/Button";
 
 const pages = [
-  { href: "/", title: "home" },
-  { href: "/search", title: "search" },
-  { href: "/about", title: "about" },
-  { href: "/myPanel", title: "my panel" },
+  { href: "/", title: "Home" },
+  { href: "/search", title: "Search" },
+  { href: "/about", title: "About" },
+  { href: "/myPanel", title: "My Panel" },
 ];
 
 function Header() {
@@ -31,7 +32,7 @@ function Header() {
           ))}
         </ul>
       </nav>
-      <button>Login/ Sign up</button>
+      <Button variant={Variant.OUTLINE}>Login/ Sign up</Button>
     </header>
   );
 }

@@ -1,0 +1,13 @@
+.card {
+  background-color: var(--color-surface-700);
+  box-shadow: var(--shadow-400);
+
+  padding: 1rem;
+
+  border-radius: var(--border-radius);
+
+  .title {
+    font-weight: 700;
+    padding-block-end: 0.5rem;
+  }
+}

@@ -6,17 +6,17 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <h1>
-        <DoctorOnlineLogo></DoctorOnlineLogo>
+        <DoctorOnlineLogo />
         Doctor Online
       </h1>
 
-      <GlobalSearchBox></GlobalSearchBox>
+      <GlobalSearchBox />
 
       <div className={styles.history}>
-        <div>Recent search</div>
+        <div>Your recent search:</div>
         <ul>
-          <li>Psychologist</li>
-          <li>Pediatrician</li>
+          <li>Gynecologist</li>
+          <li>Dermatologist</li>
         </ul>
       </div>
     </div>

@@ -1,0 +1,41 @@
+.selected-filters {
+  display: grid;
+  gap: 0.5rem;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    align-items: center;
+
+    button {
+      color: var(--color-danger);
+    }
+  }
+
+  .filters {
+    display: flex;
+
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    .filter {
+      border-radius: var(--border-radius);
+      border: 0.1rem solid var(--color-primary);
+
+      display: flex;
+      gap: 0.25rem;
+
+      color: var(--color-gray-30);
+      padding: 0.2rem 0.5rem;
+
+      button {
+        display: flex;
+        align-items: center;
+
+        color: var(--color-danger);
+        padding: 0;
+      }
+    }
+  }
+}
