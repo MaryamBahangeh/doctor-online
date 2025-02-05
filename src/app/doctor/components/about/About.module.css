@@ -1,0 +1,7 @@
+.about {
+  .info {
+    background-color: var(--color-gray-70);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+  }
+}

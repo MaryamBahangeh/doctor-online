@@ -1,0 +1,49 @@
+.reviews {
+  display: grid;
+  gap: 1rem;
+
+  .filter {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    align-content: center;
+
+    margin: auto;
+    padding-inline: 1rem;
+    margin-block-end: 1rem;
+
+    border-radius: var(--border-radius);
+
+    .input-container {
+      flex: 1;
+      inline-size: min(50rem, 100%);
+      display: flex;
+      gap: 0.5rem;
+
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+      padding: 0.41rem 0.5rem;
+
+      .prefix {
+        font-size: var(--fz-500);
+      }
+
+      input {
+        flex: 1;
+        color: var(--color-gray-16);
+        border: none;
+        background-color: transparent;
+        outline: none;
+      }
+      &:focus-within {
+        border-color: var(--color-primary);
+      }
+    }
+  }
+
+  .reviews-container {
+    display: grid;
+    gap: 2rem;
+    padding-inline: 1rem;
+  }
+}

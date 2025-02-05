@@ -1,0 +1,30 @@
+.review {
+  display: grid;
+  gap: 1rem;
+
+  background-color: var(--color-gray-70);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+
+  .user-info {
+    display: flex;
+    gap: 1rem;
+
+    .image {
+      border-radius: 999rem;
+    }
+
+    .primary-info {
+      flex: 1;
+      display: grid;
+    }
+
+    .rank {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .comment-text {
+  }
+}

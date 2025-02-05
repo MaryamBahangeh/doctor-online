@@ -1,0 +1,56 @@
+.doctor-info {
+  background-color: var(--color-gray-98);
+  display: grid;
+  color: var(--color-gray-30);
+  border-radius: var(--border-radius);
+
+  .image {
+    border-radius: 999rem;
+  }
+
+  .primary-info {
+    align-content: center;
+
+    display: flex;
+    gap: 2rem;
+
+    .info {
+      display: grid;
+      gap: 0.5rem;
+      align-self: center;
+
+      .name {
+        font-weight: 700;
+        font-size: var(--fz-400);
+      }
+
+      .speciality {
+        font-size: var(--fz-300);
+        color: var(--color-gray-40);
+      }
+
+      .address {
+        display: flex;
+        gap: 0.25rem;
+        align-items: center;
+        color: var(--color-gray-50);
+      }
+    }
+  }
+  .rate {
+    justify-self: center;
+
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+
+    > span {
+      margin-inline-start: 0.3rem;
+      color: blue;
+    }
+  }
+
+  .about {
+    color: var(--color-gray-40);
+  }
+}

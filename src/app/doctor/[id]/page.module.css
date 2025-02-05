@@ -1,0 +1,12 @@
+.doctor-detail {
+  padding-block: 3rem;
+  display: grid;
+  grid-template-areas:
+    "doctor-info more-info"
+    "about activities"
+    "Reviews activities";
+
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+}
