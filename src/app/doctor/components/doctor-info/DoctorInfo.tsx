@@ -25,11 +25,11 @@ function DoctorInfo({ doctor }: Props) {
 
         <div className={styles.info}>
           <div className={styles.name}>{doctor.name}</div>
-          <div className={styles.speciality}>{doctor.specialityName}</div>
+          <div className={styles.speciality}>{doctor.speciality.label}</div>
         </div>
 
         <div className={styles.info}>
-          <div className={styles.speciality}>{doctor.specialtyDegreeName}</div>
+          <div className={styles.speciality}>{doctor.degree.label}</div>
           <div className={styles.address}>
             <MingcuteLocationLine />
             {doctor.address}
