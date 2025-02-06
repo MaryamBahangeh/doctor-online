@@ -49,8 +49,4 @@
       color: blue;
     }
   }
-
-  .about {
-    color: var(--color-gray-40);
-  }
 }

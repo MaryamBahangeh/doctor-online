@@ -9,7 +9,7 @@ import martin from "@/assests/doctors-images/martin.jpg";
 export const doctorReviews: DoctorReviewModel[] = [
   {
     id: "1",
-    doctorId: "1",
+    doctorId: "97420f0d-b576-4f65-9ffc-a81b4b1b4e77",
     rate: 4,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
@@ -20,8 +20,8 @@ export const doctorReviews: DoctorReviewModel[] = [
 
   {
     id: "2",
-    doctorId: "1",
-    rate: 5,
+    doctorId: "97420f0d-b576-4f65-9ffc-a81b4b1b4e77",
+    rate: 3.5,
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
      doctor isn’t available. I was very well taken care of`,
