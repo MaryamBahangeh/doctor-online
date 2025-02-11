@@ -35,7 +35,7 @@ export const doctors: DoctorModel[] = [
       "cataract\tsurgery,\tcorneal\ttransplantation,\tand\tlaser\trefractive\tprocedures.\tHe\tis\ta\t\n" +
       "founding\tmember\tof\tPrecision\tLASIK\tGroup,\tChief\tof\tOphthalmology\tat\tThe\tHospital\t\n" +
       "of\tCentral\tConnecticut,\tand\tco-medical\tdirector\tof\tthe\tConnecticut\teye\tbank.",
-    amount: 200,
+    price: 200,
   },
   {
     id: "88820f0d-b576-9ffc-a81b4b1b4e7",

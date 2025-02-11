@@ -1,52 +1,53 @@
 .doctor-info {
-  background-color: var(--color-gray-98);
   display: grid;
-  color: var(--color-gray-30);
-  border-radius: var(--border-radius);
+  gap: 1rem;
 
-  .image {
-    border-radius: 999rem;
-  }
-
-  .primary-info {
-    align-content: center;
-
-    display: flex;
-    gap: 2rem;
+  .main {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto 1fr auto;
+    .image {
+      border-radius: 999rem;
+    }
 
     .info {
-      display: grid;
-      gap: 0.5rem;
       align-self: center;
+      display: grid;
 
+      gap: 0.5rem;
       .name {
         font-weight: 700;
-        font-size: var(--fz-400);
+        font-size: var(--fz-500);
       }
 
       .speciality {
         font-size: var(--fz-300);
         color: var(--color-gray-40);
       }
+    }
 
-      .address {
-        display: flex;
-        gap: 0.25rem;
-        align-items: center;
-        color: var(--color-gray-50);
+    .rate {
+      align-self: center;
+      justify-self: end;
+
+      display: flex;
+      gap: 0.2rem;
+      align-items: center;
+
+      border-radius: 999rem;
+      background-color: var(--color-star);
+
+      padding: 0.25rem 0.75rem;
+
+      > span {
+        margin-inline-start: 0.25rem;
+      }
+      svg {
+        color: var(--color-primary-darker);
       }
     }
   }
-  .rate {
-    justify-self: center;
-
-    display: flex;
-    gap: 0.2rem;
-    align-items: center;
-
-    > span {
-      margin-inline-start: 0.3rem;
-      color: blue;
-    }
+  .description {
+    justify-self: start;
   }
 }

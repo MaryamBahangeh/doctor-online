@@ -14,33 +14,25 @@ type Props = {
 function DoctorInfo({ doctor }: Props) {
   return (
     <Card className={styles["doctor-info"]}>
-      <div className={styles["primary-info"]}>
+      <div className={styles.main}>
         <Image
           src={doctor.image}
           className={styles.image}
           alt="doctor image"
-          width={90}
-          height={90}
+          width={120}
+          height={120}
         />
 
         <div className={styles.info}>
           <div className={styles.name}>{doctor.name}</div>
           <div className={styles.speciality}>{doctor.speciality.label}</div>
         </div>
-
-        <div className={styles.info}>
-          <div className={styles.speciality}>{doctor.degree.label}</div>
-          <div className={styles.address}>
-            <MingcuteLocationLine />
-            {doctor.address}
-          </div>
+        <div className={styles.rate}>
+          <StarBold /> {doctor.rate}
+          <span> {" (" + doctor.totalVotes + " reviews)"}</span>
         </div>
       </div>
-      <div>{doctor.description}</div>
-      <div className={styles.rate}>
-        <StarBold color={"gold"} /> {doctor.rate}
-        <span> {" (" + doctor.totalVotes + " reviews)"}</span>
-      </div>
+      <div className={styles.description}>{doctor.description}</div>
     </Card>
   );
 }

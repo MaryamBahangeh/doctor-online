@@ -13,5 +13,5 @@ export type DoctorModel = {
   degree: SelectOptionType;
   description: string;
   aboutMe?: string;
-  amount?: number;
+  price?: number;
 };
