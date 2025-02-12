@@ -22,7 +22,6 @@
       }
 
       .speciality {
-        font-size: var(--fz-300);
         color: var(--color-gray-40);
       }
     }

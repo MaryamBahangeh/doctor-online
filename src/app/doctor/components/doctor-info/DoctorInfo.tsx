@@ -24,7 +24,9 @@ function DoctorInfo({ doctor }: Props) {
 
         <div className={styles.info}>
           <div className={styles.name}>{doctor.name}</div>
-          <div className={styles.speciality}>{doctor.speciality.label}</div>
+          <div className={styles.speciality}>
+            {doctor.speciality.label} - {doctor.degree.label}
+          </div>
         </div>
 
         <div className={styles.rate}>
