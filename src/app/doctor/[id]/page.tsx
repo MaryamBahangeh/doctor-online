@@ -6,7 +6,7 @@ import { doctors } from "@/assests/doctors";
 import { notFound } from "next/navigation";
 
 import DoctorInfo from "@/app/doctor/components/doctor-info/DoctorInfo";
-import MoreInfo from "@/app/doctor/components/more-info/MoreInfo";
+import AppointmentInfo from "@/app/doctor/components/appointment-info/AppointmentInfo";
 import Activities from "@/app/doctor/components/activities/Activities";
 import About from "@/app/doctor/components/about/About";
 import Reviews from "@/app/doctor/components/reviews/Reviews";
@@ -27,14 +27,14 @@ function Page({ params }: Props): ReactElement {
   return (
     <div className={styles["doctor-detail"]}>
       <ReviewProvider>
-        <DoctorInfo doctor={doctor} />
-        <MoreInfo doctor={doctor} />
-
-        <About doctor={doctor} />
-
-        <Activities doctor={doctor} />
-
-        <Reviews doctor={doctor}></Reviews>
+        <div className={styles.Info}>
+          <DoctorInfo doctor={doctor} /> <About doctor={doctor} />{" "}
+          <Reviews doctor={doctor} />
+        </div>
+        <div className={styles.Info}>
+          <AppointmentInfo doctor={doctor} />
+          <Activities doctor={doctor} />
+        </div>
       </ReviewProvider>
     </div>
   );

@@ -5,15 +5,15 @@ import { DoctorModel } from "@/models/doctor";
 import Card from "@/components/card/Card";
 import Button, { Color, Variant } from "@/components/Button/Button";
 
-import styles from "./MoreInfo.module.css";
+import styles from "./AppointmentInfo.module.css";
 
 type Props = {
   doctor: DoctorModel;
 };
 
-function MoreInfo({ doctor }: Props) {
+function AppointmentInfo({ doctor }: Props) {
   return (
-    <Card className={styles["more-info"]}>
+    <Card className={styles["appointment-info"]}>
       <header>
         <div className={styles.indicator}></div>
         <div className={styles.title}>Book an appointment now!</div>
@@ -45,4 +45,4 @@ function MoreInfo({ doctor }: Props) {
   );
 }
 
-export default MoreInfo;
+export default AppointmentInfo;
