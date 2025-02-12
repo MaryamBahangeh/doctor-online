@@ -49,9 +49,7 @@ function ReviewProvider({ children }: PropsWithChildren) {
       }
 
       if (sortBy.value === "1") {
-        return filteredReviews.sort((a, b) =>
-          b.datetime.localeCompare(a.datetime),
-        );
+        return filteredReviews.sort((a, b) => b.date.localeCompare(a.date));
       }
 
       return filteredReviews;
