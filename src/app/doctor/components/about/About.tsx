@@ -10,8 +10,8 @@ type Props = {
 
 function About({ doctor }: Props) {
   return (
-    <Card className={styles.about} title="About me">
-      {doctor.aboutMe}
+    <Card title="About me">
+      <div className={styles.about}>{doctor.aboutMe}</div>
     </Card>
   );
 }

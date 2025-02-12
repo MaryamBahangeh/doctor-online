@@ -1,11 +1,4 @@
 import { DoctorReviewModel } from "@/models/doctor-review";
-import lukas from "@/assests/doctors-images/lukas.webp";
-import whitley from "@/assests/doctors-images/whitley.jpeg";
-import brody from "@/assests/doctors-images/brody.webp";
-import jack from "@/assests/doctors-images/jack.png";
-import mateo from "@/assests/doctors-images/mateo.jpg";
-import martin from "@/assests/doctors-images/martin.jpg";
-
 export const doctorReviews: DoctorReviewModel[] = [
   {
     id: "1",
@@ -13,9 +6,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
-    userName: "Elin Brood",
-    image: lukas.src,
-    datetime: "2021/05/01",
+    user: {
+      id: "1",
+      username: "Elin",
+      name: "Elin Brood",
+    },
+    date: "2021/05/01",
   },
 
   {
@@ -25,9 +21,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
      doctor isn’t available. I was very well taken care of`,
-    userName: "Daphne Miloo",
-    image: whitley.src,
-    datetime: "2022/07/06",
+    user: {
+      id: "2",
+      username: "Daphne",
+      name: "Daphne Miloo",
+    },
+    date: "2022/07/06",
   },
 
   {
@@ -36,9 +35,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
-    userName: "Daphne Farmed",
-    image: brody.src,
-    datetime: "2024/03/01",
+    user: {
+      id: "3",
+      username: "Sara",
+      name: "Sara Teslin",
+    },
+    date: "2024/03/01",
   },
 
   {
@@ -47,9 +49,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4.2,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
-    userName: "Elin Brood",
-    image: mateo.src,
-    datetime: "2020/05/01",
+    user: {
+      id: "4",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2020/05/01",
   },
 
   {
@@ -59,9 +64,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
      doctor isn’t available. I was very well taken care of`,
-    userName: "Eva Miloo",
-    image: jack.src,
-    datetime: "2023/08/06",
+    user: {
+      id: "5",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2023/08/06",
   },
 
   {
@@ -70,9 +78,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 2.6,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
-    userName: "Daphne Farmed",
-    image: martin.src,
-    datetime: "2024/09/07",
+    user: {
+      id: "6",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2024/09/07",
   },
 
   {
@@ -81,9 +92,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4.7,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
-    userName: "Elin Brood",
-    image: lukas.src,
-    datetime: "2022/05/01",
+    user: {
+      id: "7",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2022/05/01",
   },
 
   {
@@ -93,9 +107,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
      doctor isn’t available. I was very well taken care of`,
-    userName: "Eva Miloo",
-    image: whitley.src,
-    datetime: "2024/03/06",
+    user: {
+      id: "8",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2024/03/06",
   },
 
   {
@@ -104,9 +121,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 3.5,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
-    userName: "Daphne Farmed",
-    image: brody.src,
-    datetime: "2021/06/08",
+    user: {
+      id: "9",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2021/06/08",
   },
 
   {
@@ -115,9 +135,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
-    userName: "Elin Brood",
-    image: mateo.src,
-    datetime: "2019/03/01",
+    user: {
+      id: "10",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2019/03/01",
   },
 
   {
@@ -127,9 +150,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
      doctor isn’t available. I was very well taken care of`,
-    userName: "Eva Miloo",
-    image: jack.src,
-    datetime: "2021/04/06",
+    user: {
+      id: "11",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2021/04/06",
   },
 
   {
@@ -138,9 +164,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 2.8,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
-    userName: "Daphne Farmed",
-    image: martin.src,
-    datetime: "2021/10/08",
+    user: {
+      id: "12",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2021/10/08",
   },
 
   {
@@ -149,9 +178,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
-    userName: "Elin Brood",
-    image: lukas.src,
-    datetime: "2021/05/01",
+    user: {
+      id: "13",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2021/05/01",
   },
 
   {
@@ -161,9 +193,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
      doctor isn’t available. I was very well taken care of`,
-    userName: "Eva Miloo",
-    image: whitley.src,
-    datetime: "2022/07/06",
+    user: {
+      id: "14",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2022/07/06",
   },
 
   {
@@ -172,9 +207,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
-    userName: "Daphne Farmed",
-    image: jack.src,
-    datetime: "2024/03/01",
+    user: {
+      id: "15",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2024/03/01",
   },
 
   {
@@ -183,9 +221,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4.2,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
-    userName: "Elin Brood",
-    image: whitley.src,
-    datetime: "2020/08/10",
+    user: {
+      id: "16",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2020/08/10",
   },
 
   {
@@ -195,9 +236,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
      doctor isn’t available. I was very well taken care of`,
-    userName: "Eva Miloo",
-    image: mateo.src,
-    datetime: "2021/08/06",
+    user: {
+      id: "17",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2021/08/06",
   },
 
   {
@@ -206,9 +250,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 5,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
-    userName: "Daphne Farmed",
-    image: martin.src,
-    datetime: "2020/09/07",
+    user: {
+      id: "18",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2020/09/07",
   },
 
   {
@@ -217,9 +264,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
-    userName: "Elin Brood",
-    image: lukas.src,
-    datetime: "2021/05/01",
+    user: {
+      id: "19",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2021/05/01",
   },
 
   {
@@ -229,9 +279,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
      doctor isn’t available. I was very well taken care of`,
-    userName: "Eva Miloo",
-    image: whitley.src,
-    datetime: "2024/07/06",
+    user: {
+      id: "20",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2024/07/06",
   },
 
   {
@@ -240,9 +293,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4.2,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
-    userName: "Daphne Farmed",
-    image: brody.src,
-    datetime: "2024/03/01",
+    user: {
+      id: "21",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2024/03/01",
   },
 
   {
@@ -251,9 +307,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4.8,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
-    userName: "Elin Brood",
-    image: mateo.src,
-    datetime: "2020/10/09",
+    user: {
+      id: "22",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2020/10/09",
   },
 
   {
@@ -263,9 +322,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
      doctor isn’t available. I was very well taken care of`,
-    userName: "Eva Miloo",
-    image: jack.src,
-    datetime: "2023/03/11",
+    user: {
+      id: "23",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2023/03/11",
   },
 
   {
@@ -274,9 +336,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4.4,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
-    userName: "Daphne Farmed",
-    image: martin.src,
-    datetime: "2024/05/09",
+    user: {
+      id: "24",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2024/05/09",
   },
 
   {
@@ -285,9 +350,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 3.2,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
-    userName: "Elin Brood",
-    image: lukas.src,
-    datetime: "2019/05/01",
+    user: {
+      id: "25",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2019/05/01",
   },
 
   {
@@ -297,9 +365,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
      doctor isn’t available. I was very well taken care of`,
-    userName: "Eva Miloo",
-    image: whitley.src,
-    datetime: "2022/07/06",
+    user: {
+      id: "26",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2022/07/06",
   },
 
   {
@@ -308,9 +379,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4.3,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
-    userName: "Daphne Farmed",
-    image: brody.src,
-    datetime: "2024/06/01",
+    user: {
+      id: "27",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2024/06/01",
   },
 
   {
@@ -319,9 +393,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
-    userName: "Elin Brood",
-    image: mateo.src,
-    datetime: "2020/10/01",
+    user: {
+      id: "28",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2020/10/01",
   },
 
   {
@@ -331,9 +408,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
      doctor isn’t available. I was very well taken care of`,
-    userName: "Eva Miloo",
-    image: jack.src,
-    datetime: "2023/03/06",
+    user: {
+      id: "29",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2023/03/06",
   },
 
   {
@@ -342,9 +422,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 2.6,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
-    userName: "Daphne Farmed",
-    image: martin.src,
-    datetime: "2024/09/07",
+    user: {
+      id: "30",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2024/09/07",
   },
   /////
   {
@@ -353,9 +436,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
-    userName: "Elin Brood",
-    image: lukas.src,
-    datetime: "2021/05/01",
+    user: {
+      id: "31",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2021/05/01",
   },
 
   {
@@ -365,9 +451,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
      doctor isn’t available. I was very well taken care of`,
-    userName: "Eva Miloo",
-    image: whitley.src,
-    datetime: "2022/07/06",
+    user: {
+      id: "32",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2022/07/06",
   },
 
   {
@@ -376,9 +465,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
-    userName: "Daphne Farmed",
-    image: brody.src,
-    datetime: "2024/03/01",
+    user: {
+      id: "33",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2024/03/01",
   },
 
   {
@@ -387,9 +479,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 4.2,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
-    userName: "Elin Brood",
-    image: mateo.src,
-    datetime: "2020/05/01",
+    user: {
+      id: "34",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2020/05/01",
   },
 
   {
@@ -399,9 +494,12 @@ export const doctorReviews: DoctorReviewModel[] = [
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
      doctor isn’t available. I was very well taken care of`,
-    userName: "Eva Miloo",
-    image: jack.src,
-    datetime: "2023/08/06",
+    user: {
+      id: "35",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2023/08/06",
   },
 
   {
@@ -410,8 +508,11 @@ export const doctorReviews: DoctorReviewModel[] = [
     rate: 2.6,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
-    userName: "Daphne Farmed",
-    image: martin.src,
-    datetime: "2024/09/07",
+    user: {
+      id: "36",
+      username: "Norah",
+      name: "Norah Dellman",
+    },
+    date: "2024/09/07",
   },
 ];

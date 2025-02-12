@@ -1,9 +1,10 @@
+import { UserModel } from "@/models/user";
+
 export type DoctorReviewModel = {
   id: string;
   doctorId: string;
   rate: number;
   text: string;
-  userName: string;
-  image: string;
-  datetime: string;
+  user: UserModel;
+  date: string;
 };

@@ -12,11 +12,11 @@ function Review({ review }: Props) {
   return (
     <div className={styles.review}>
       <div className={styles["user-info"]}>
-        <div className={styles.image}>{review.userName[0].toUpperCase()}</div>
+        <div className={styles.image}>{review.user.name[0].toUpperCase()}</div>
 
         <div className={styles["primary-info"]}>
-          <div className={styles.name}>{review.userName}</div>
-          <div className={styles.date}>{review.datetime}</div>
+          <div className={styles.name}>{review.user.name}</div>
+          <div className={styles.date}>{review.date}</div>
         </div>
 
         <div className={styles.rate}>
