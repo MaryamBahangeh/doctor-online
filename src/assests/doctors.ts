@@ -36,6 +36,8 @@ export const doctors: DoctorModel[] = [
       "founding\tmember\tof\tPrecision\tLASIK\tGroup,\tChief\tof\tOphthalmology\tat\tThe\tHospital\t\n" +
       "of\tCentral\tConnecticut,\tand\tco-medical\tdirector\tof\tthe\tConnecticut\teye\tbank.",
     price: 200,
+    consultations: 120,
+    membershipDuration: "2 years and 3 months",
   },
   {
     id: "88820f0d-b576-9ffc-a81b4b1b4e7",

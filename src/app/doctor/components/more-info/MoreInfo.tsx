@@ -20,11 +20,11 @@ function MoreInfo({ doctor }: Props) {
       <main>
         <ul className={styles.perks}>
           <li className={styles.perk}>
-            An online meeting for <span>30 minutes</span> video call
+            An online meeting for <strong>30 minutes</strong> video call
           </li>
           <li className={styles.perk}>
             You can ask the doctor any questions you have for up to
-            <span> 3 days</span>
+            <strong> 3 days</strong>
           </li>
         </ul>
       </main>

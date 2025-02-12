@@ -2,7 +2,7 @@
   display: grid;
   gap: 1rem;
 
-  background-color: var(--color-gray-70);
+  background-color: var(--color-surface-400);
   border-radius: var(--border-radius);
   padding: 1rem;
 
@@ -11,20 +11,54 @@
     gap: 1rem;
 
     .image {
+      grid-area: image;
+
+      background-color: var(--color-primary);
+      color: var(--color-primary-opposite);
+
+      display: grid;
+      place-content: center;
+
+      min-block-size: 100%;
+      block-size: 0;
+      aspect-ratio: 1 / 1;
+
       border-radius: 999rem;
+
+      font-size: var(--fz-500);
     }
 
     .primary-info {
-      flex: 1;
+      flex: 1 1 0;
+      align-self: center;
       display: grid;
+      gap: 0.5rem;
+
+      .name {
+        font-size: var(--fz-500);
+        font-weight: 700;
+      }
+
+      .date {
+        font-size: var(--fz-300);
+      }
     }
 
-    .rank {
+    .rate {
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 0.25rem;
+      font-weight: 700;
+
+      svg {
+        color: var(--color-star);
+      }
     }
   }
   .comment-text {
+    white-space: pre-line;
+    line-height: 1.5rem;
+    max-width: 70ch;
   }
 }

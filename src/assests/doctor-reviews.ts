@@ -25,7 +25,7 @@ export const doctorReviews: DoctorReviewModel[] = [
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
      doctor isn’t available. I was very well taken care of`,
-    userName: "Eva Miloo",
+    userName: "Daphne Miloo",
     image: whitley.src,
     datetime: "2022/07/06",
   },

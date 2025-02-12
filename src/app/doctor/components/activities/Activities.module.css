@@ -2,13 +2,15 @@
   display: grid;
   gap: 1rem;
 
-  span {
-    font-weight: 700;
-  }
-
   .info {
-    background-color: var(--color-gray-70);
+    background-color: var(--color-surface-400);
     padding: 1rem;
     border-radius: var(--border-radius);
+
+    svg {
+      margin-inline-end: 0.5rem;
+      padding-block-start: 0.25rem;
+      font-size: var(--fz-500);
+    }
   }
 }

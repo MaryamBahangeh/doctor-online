@@ -11,21 +11,14 @@ function Review({ review }: Props) {
   return (
     <div className={styles.review}>
       <div className={styles["user-info"]}>
-        <Image
-          className={styles.image}
-          src={review.image}
-          alt="user image"
-          width="70"
-          height="70"
-        ></Image>
-
+        <div className={styles.image}>{review.userName[0].toUpperCase()}</div>
         <div className={styles["primary-info"]}>
-          <div>{review.userName}</div>
-          <div>{review.datetime}</div>
+          <div className={styles.name}>{review.userName}</div>
+          <div className={styles.date}>{review.datetime}</div>
         </div>
 
         <div className={styles.rate}>
-          <StarBold color={"gold"} /> {review.rate}
+          <StarBold /> {review.rate}
         </div>
       </div>
 

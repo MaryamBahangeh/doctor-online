@@ -2,14 +2,14 @@ import React, { ReactElement } from "react";
 import { doctors } from "@/assests/doctors";
 import { notFound } from "next/navigation";
 
-import styles from "./page.module.css";
-
 import DoctorInfo from "@/app/doctor/components/doctor-info/DoctorInfo";
 import MoreInfo from "@/app/doctor/components/more-info/MoreInfo";
 import Activities from "@/app/doctor/components/activities/Activities";
 import About from "@/app/doctor/components/about/About";
 import Reviews from "@/app/doctor/components/reviews/Reviews";
 import ReviewProvider from "@/app/doctor/components/reviews/providers/ReviewProvider";
+
+import styles from "./page.module.css";
 
 type Props = {
   params: { id: string };

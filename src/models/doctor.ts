@@ -14,4 +14,6 @@ export type DoctorModel = {
   description: string;
   aboutMe?: string;
   price?: number;
+  consultations?: number;
+  membershipDuration?: string;
 };

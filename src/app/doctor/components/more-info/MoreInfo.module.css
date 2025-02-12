@@ -61,9 +61,6 @@
 
       .perk {
         font-size: var(--fz-300);
-        > span {
-          font-weight: 700;
-        }
       }
     }
   }

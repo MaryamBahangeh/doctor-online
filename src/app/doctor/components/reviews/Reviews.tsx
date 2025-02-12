@@ -28,7 +28,7 @@ function Reviews({ doctor }: Props) {
   };
 
   return (
-    <Card className={styles.reviews} title={"Reviews on " + doctor.name + ":"}>
+    <Card className={styles.reviews} title={"Reviews on " + doctor.name}>
       <form className={styles.filter} onSubmit={submitHandler}>
         <SelectComponent
           options={REVIEWS_SORT_OPTIONS}
