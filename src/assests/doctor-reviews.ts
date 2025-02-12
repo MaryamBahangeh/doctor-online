@@ -2,7 +2,7 @@ import { DoctorReviewModel } from "@/models/doctor-review";
 export const doctorReviews: DoctorReviewModel[] = [
   {
     id: "1",
-    doctorId: "97420f0d-b576-4f65-9ffc-a81b4b1b4e77",
+    doctorId: "1",
     rate: 4,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
@@ -16,7 +16,7 @@ export const doctorReviews: DoctorReviewModel[] = [
 
   {
     id: "2",
-    doctorId: "97420f0d-b576-4f65-9ffc-a81b4b1b4e77",
+    doctorId: "1",
     rate: 3.5,
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
@@ -45,7 +45,7 @@ export const doctorReviews: DoctorReviewModel[] = [
 
   {
     id: "4",
-    doctorId: "1",
+    doctorId: "2",
     rate: 4.2,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
@@ -59,7 +59,7 @@ export const doctorReviews: DoctorReviewModel[] = [
 
   {
     id: "5",
-    doctorId: "1",
+    doctorId: "2",
     rate: 3.5,
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
@@ -74,7 +74,7 @@ export const doctorReviews: DoctorReviewModel[] = [
 
   {
     id: "6",
-    doctorId: "1",
+    doctorId: "2",
     rate: 2.6,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
@@ -88,7 +88,7 @@ export const doctorReviews: DoctorReviewModel[] = [
 
   {
     id: "7",
-    doctorId: "2",
+    doctorId: "3",
     rate: 4.7,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
@@ -102,7 +102,7 @@ export const doctorReviews: DoctorReviewModel[] = [
 
   {
     id: "8",
-    doctorId: "2",
+    doctorId: "3",
     rate: 5,
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
@@ -117,7 +117,7 @@ export const doctorReviews: DoctorReviewModel[] = [
 
   {
     id: "9",
-    doctorId: "2",
+    doctorId: "3",
     rate: 3.5,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
@@ -131,7 +131,7 @@ export const doctorReviews: DoctorReviewModel[] = [
 
   {
     id: "10",
-    doctorId: "3",
+    doctorId: "4",
     rate: 4,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
@@ -145,7 +145,7 @@ export const doctorReviews: DoctorReviewModel[] = [
 
   {
     id: "11",
-    doctorId: "3",
+    doctorId: "4",
     rate: 4.5,
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
@@ -160,7 +160,7 @@ export const doctorReviews: DoctorReviewModel[] = [
 
   {
     id: "12",
-    doctorId: "3",
+    doctorId: "4",
     rate: 2.8,
     text: `Thank you very much! Everyone is so friendly and I am very thankful you are in this area to care for 
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
@@ -174,7 +174,7 @@ export const doctorReviews: DoctorReviewModel[] = [
 
   {
     id: "13",
-    doctorId: "4",
+    doctorId: "5",
     rate: 4,
     text: `I signed in online… I was notified when three patients were in front on me
    and I had a 10 minute drive to the office. I really like signing in online. Thanks`,
@@ -188,7 +188,7 @@ export const doctorReviews: DoctorReviewModel[] = [
 
   {
     id: "14",
-    doctorId: "4",
+    doctorId: "5",
     rate: 5,
     text: `Everyone was very nice, and it is nice to be treated well since you are the patient in need of help. Caring,
      smiling and laughing is good atmosphere for patients. I will continue to come here when my family 
@@ -310,7 +310,7 @@ export const doctorReviews: DoctorReviewModel[] = [
     user: {
       id: "22",
       username: "Norah",
-      name: "Norah Dellman",
+      name: "Norah",
     },
     date: "2020/10/09",
   },
@@ -325,7 +325,7 @@ export const doctorReviews: DoctorReviewModel[] = [
     user: {
       id: "23",
       username: "Norah",
-      name: "Norah Dellman",
+      name: "Dellman",
     },
     date: "2023/03/11",
   },
@@ -338,8 +338,8 @@ export const doctorReviews: DoctorReviewModel[] = [
     us when we need you. Your hours you are available are wonderful. The Doctors, nurses & staff are professional and very thorough`,
     user: {
       id: "24",
-      username: "Norah",
-      name: "Norah Dellman",
+      username: "Eva",
+      name: "Eva",
     },
     date: "2024/05/09",
   },
