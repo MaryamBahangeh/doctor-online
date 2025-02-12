@@ -1,8 +1,11 @@
 import React from "react";
-import styles from "./MoreInfo.module.css";
-import Card from "@/components/card/Card";
+
 import { DoctorModel } from "@/models/doctor";
+
+import Card from "@/components/card/Card";
 import Button, { Color, Variant } from "@/components/Button/Button";
+
+import styles from "./MoreInfo.module.css";
 
 type Props = {
   doctor: DoctorModel;

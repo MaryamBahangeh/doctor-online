@@ -5,6 +5,7 @@
   .filter {
     display: flex;
     gap: 2rem;
+
     align-items: center;
     align-content: center;
 
@@ -16,9 +17,11 @@
 
     .input-container {
       flex: 1;
-      inline-size: min(50rem, 100%);
+
       display: flex;
       gap: 0.5rem;
+
+      inline-size: min(50rem, 100%);
 
       border: 1px solid var(--color-border);
       border-radius: var(--border-radius);
@@ -35,6 +38,7 @@
         background-color: transparent;
         outline: none;
       }
+
       &:focus-within {
         border-color: var(--color-primary);
       }

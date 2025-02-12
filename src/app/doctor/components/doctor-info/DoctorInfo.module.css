@@ -6,6 +6,7 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: auto 1fr auto;
+
     .image {
       border-radius: 999rem;
     }
@@ -13,8 +14,8 @@
     .info {
       align-self: center;
       display: grid;
-
       gap: 0.5rem;
+
       .name {
         font-weight: 700;
         font-size: var(--fz-500);
@@ -42,11 +43,13 @@
       > span {
         margin-inline-start: 0.25rem;
       }
+
       svg {
-        color: var(--color-primary-darker);
+        color: var(--color-primary);
       }
     }
   }
+
   .description {
     justify-self: start;
   }

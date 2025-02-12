@@ -42,6 +42,7 @@
     .title {
       font-size: var(--fz-300);
     }
+
     .price {
       font-weight: 700;
     }

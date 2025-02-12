@@ -5,7 +5,6 @@ import StarBold from "@/icons/StarBold";
 import { DoctorModel } from "@/models/doctor";
 
 import styles from "./DoctorInfo.module.css";
-import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
 
 type Props = {
   doctor: DoctorModel;
@@ -27,11 +26,13 @@ function DoctorInfo({ doctor }: Props) {
           <div className={styles.name}>{doctor.name}</div>
           <div className={styles.speciality}>{doctor.speciality.label}</div>
         </div>
+
         <div className={styles.rate}>
           <StarBold /> {doctor.rate}
           <span> {" (" + doctor.totalVotes + " reviews)"}</span>
         </div>
       </div>
+
       <div className={styles.description}>{doctor.description}</div>
     </Card>
   );
