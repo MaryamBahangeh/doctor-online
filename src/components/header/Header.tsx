@@ -32,7 +32,11 @@ function Header() {
           ))}
         </ul>
       </nav>
-      <Button buttonType={ButtonType.LINK} variant={Variant.OUTLINE} linkTo='/auth/sign-in'>
+      <Button
+        buttonType={ButtonType.LINK}
+        variant={Variant.OUTLINE}
+        linkTo="/auth/sign-in"
+      >
         Login/ Sign up
       </Button>
     </header>

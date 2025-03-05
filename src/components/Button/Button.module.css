@@ -3,7 +3,7 @@
 
   text-decoration: none;
 
-  &:not(.idle){
+  &:not(.idle) {
     padding: 0.5rem 1rem;
 
     svg {
@@ -42,8 +42,9 @@
   &.text {
     background-color: transparent;
 
-    &:not(.idle){
-    padding: 0.5rem 0.5rem;}
+    &:not(.idle) {
+      padding: 0.5rem 0.5rem;
+    }
 
     border: none;
 

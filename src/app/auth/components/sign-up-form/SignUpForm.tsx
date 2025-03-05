@@ -7,7 +7,7 @@ import Link from "next/link";
 
 import signUpImage from "@/assests/images/sign-up.webp";
 
-import Button ,{Variant,Color} from "@/components/button/Button";
+import Button, { Variant, Color } from "@/components/button/Button";
 import CardComponent from "@/components/card/Card";
 import NormalInput from "@/components/normal-input/NormalInput";
 import PasswordInput from "@/components/password-input/PasswordInput";

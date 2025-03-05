@@ -36,7 +36,6 @@ function NormalInput(
           <Button
             variant={Variant.TEXT}
             color={Color.IDLE}
-
             onClick={onSuffixClick}
           >
             <div className={styles["suffix-icon"]}>{suffixIcon}</div>
