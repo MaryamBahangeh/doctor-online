@@ -1,0 +1,8 @@
+.about {
+  background-color: var(--color-surface-400);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+
+  white-space: pre-line;
+  line-height: 1.5em;
+}

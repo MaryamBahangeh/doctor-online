@@ -7,6 +7,7 @@ import { DoctorModel } from "@/models/doctor";
 import Button, { Color, Variant } from "@/components/Button/Button";
 
 import styles from "./DoctorCard.module.css";
+import Link from "next/link";
 
 type Props = {
   doctor: DoctorModel;
@@ -16,7 +17,7 @@ function DoctorCard({ doctor }: Props) {
   return (
     <Card>
       <div className={styles["doctor-card"]}>
-        <div className={styles["primary-info"]}>
+        <Link className={styles["primary-info"]} href={`/doctor/${doctor.id}`}>
           <Image
             className={styles.image}
             src={doctor.image}
@@ -35,7 +36,7 @@ function DoctorCard({ doctor }: Props) {
           </div>
 
           <div className={styles.description}>{doctor.description}</div>
-        </div>
+        </Link>
 
         <div className={styles.line}></div>
 

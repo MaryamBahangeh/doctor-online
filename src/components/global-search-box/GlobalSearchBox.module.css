@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: center;
 
-  border: 0.1rem solid var(--color-gray-20);
-  border-radius: 20rem;
+  border: 1px solid var(--color-gray-20);
+  border-radius: 999rem;
 
   inline-size: min(50rem, 100%);
   padding: 0.5rem 1rem;

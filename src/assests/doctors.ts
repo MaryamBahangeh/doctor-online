@@ -18,7 +18,7 @@ import { SPECIALITY_OPTIONS } from "@/options/speciality-options";
 
 export const doctors: DoctorModel[] = [
   {
-    id: "97420f0d-b576-4f65-9ffc-a81b4b1b4e77",
+    id: "1",
     name: "Sara Smith",
     serviceType: SERVICE_TYPE[0],
     image: sara.src,
@@ -30,9 +30,17 @@ export const doctors: DoctorModel[] = [
     degree: DEGREE[0],
     description:
       "Diagnosing and treating conditions of the female reproductive system",
+    aboutMe:
+      "Dr.\tStern\thas\tthirty\tyears’\texperience\tin\tophthalmic\tsurgery,\twith\tspecial\tinterest\tin\t\n" +
+      "cataract\tsurgery,\tcorneal\ttransplantation,\tand\tlaser\trefractive\tprocedures.\tHe\tis\ta\t\n" +
+      "founding\tmember\tof\tPrecision\tLASIK\tGroup,\tChief\tof\tOphthalmology\tat\tThe\tHospital\t\n" +
+      "of\tCentral\tConnecticut,\tand\tco-medical\tdirector\tof\tthe\tConnecticut\teye\tbank.",
+    price: 200,
+    consultations: 120,
+    membershipDuration: "2 years and 3 months",
   },
   {
-    id: "88820f0d-b576-9ffc-a81b4b1b4e7",
+    id: "2",
     name: "John William",
     serviceType: SERVICE_TYPE[1],
     image: john.src,
@@ -43,9 +51,13 @@ export const doctors: DoctorModel[] = [
     speciality: SPECIALITY_OPTIONS[1],
     degree: DEGREE[1],
     description: "Expert in the care of your heart and blood vessels",
+    aboutMe: "",
+    price: 250,
+    consultations: 20,
+    membershipDuration: "1 years and 2 months",
   },
   {
-    id: "88820f0d-b576-335-9ffc-a81b1b4e7",
+    id: "3",
     name: "Mary Brown",
     serviceType: SERVICE_TYPE[0],
     image: mary.src,
@@ -56,9 +68,13 @@ export const doctors: DoctorModel[] = [
     speciality: SPECIALITY_OPTIONS[2],
     degree: DEGREE[0],
     description: "caring for newborn and premature babies",
+    aboutMe: "",
+    price: 350,
+    consultations: 300,
+    membershipDuration: "5 years and 7 months",
   },
   {
-    id: "8882000f0d-b576-335-9ffc-a81b4b1b4e7",
+    id: "4",
     name: "Jack Davis",
     serviceType: SERVICE_TYPE[1],
     image: jack.src,
@@ -70,10 +86,14 @@ export const doctors: DoctorModel[] = [
     degree: DEGREE[3],
     description:
       "Diagnosing and treating diseases of the respiratory system, including airways, alveoli and blood vessels",
+    aboutMe: "",
+    price: 250,
+    consultations: 80,
+    membershipDuration: "4 years and 4 months",
   },
 
   {
-    id: "97420f0d-b576-4f65-fc-a81b4b1b4e77",
+    id: "5",
     name: "Mateo Miller",
     serviceType: SERVICE_TYPE[1],
     image: mateo.src,
@@ -85,9 +105,13 @@ export const doctors: DoctorModel[] = [
     degree: DEGREE[0],
     description:
       "Diagnosing and treating conditions of the female reproductive system",
+    aboutMe: "",
+    price: 220,
+    consultations: 40,
+    membershipDuration: "6 years and 8 months",
   },
   {
-    id: "88820f0d-76-9ffc-a81b4b1b4e7",
+    id: "6",
     name: "Martin Anderson",
     serviceType: SERVICE_TYPE[0],
     image: martin.src,
@@ -98,9 +122,13 @@ export const doctors: DoctorModel[] = [
     speciality: SPECIALITY_OPTIONS[5],
     degree: DEGREE[1],
     description: "Expert in the care of your heart and blood vessels",
+    aboutMe: "",
+    price: 200,
+    consultations: 100,
+    membershipDuration: "3 years and 4 months",
   },
   {
-    id: "88820f-b576-335ffc-a81b1b4e7",
+    id: "7",
     name: "Mary Taylor",
     serviceType: SERVICE_TYPE[0],
     image: mary.src,
@@ -111,9 +139,13 @@ export const doctors: DoctorModel[] = [
     speciality: SPECIALITY_OPTIONS[5],
     degree: DEGREE[2],
     description: "caring for newborn and premature babies",
+    aboutMe: "",
+    price: 250,
+    consultations: 45,
+    membershipDuration: "5 years and 2 months",
   },
   {
-    id: "8882000f-b576-335-9ffc-a81b4b1b4e7",
+    id: "8",
     name: "Jack Clark",
     serviceType: SERVICE_TYPE[1],
     image: jack.src,
@@ -125,10 +157,18 @@ export const doctors: DoctorModel[] = [
     degree: DEGREE[3],
     description:
       "Diagnosing and treating diseases of the respiratory system, including airways, alveoli and blood vessels",
+    aboutMe:
+      "Dr.\tStern\thas\tthirty\tyears’\texperience\tin\tophthalmic\tsurgery,\twith\tspecial\tinterest\tin\t\n" +
+      "cataract\tsurgery,\tcorneal\ttransplantation,\tand\tlaser\trefractive\tprocedures.\tHe\tis\ta\t\n" +
+      "founding\tmember\tof\tPrecision\tLASIK\tGroup,\tChief\tof\tOphthalmology\tat\tThe\tHospital\t\n" +
+      "of\tCentral\tConnecticut,\tand\tco-medical\tdirector\tof\tthe\tConnecticut\teye\tbank.",
+    price: 320,
+    consultations: 50,
+    membershipDuration: "1 years and 2 months",
   },
 
   {
-    id: "97420f0d-b576-4f6-a81b4b1b4e77",
+    id: "9",
     name: "Amaris Davenport",
     serviceType: SERVICE_TYPE[1],
     image: amaris.src,
@@ -140,10 +180,14 @@ export const doctors: DoctorModel[] = [
     degree: DEGREE[2],
     description:
       "Diagnosing and treating conditions of the female reproductive system",
+    aboutMe: "",
+    price: 220,
+    consultations: 5,
+    membershipDuration: "10 months",
   },
 
   {
-    id: "88820f0-576-9ffc-a81b4b1b4e7",
+    id: "10",
     name: "Lukas Magana",
     serviceType: SERVICE_TYPE[1],
     image: lukas.src,
@@ -154,9 +198,13 @@ export const doctors: DoctorModel[] = [
     speciality: SPECIALITY_OPTIONS[1],
     degree: DEGREE[0],
     description: "Expert in the care of your heart and blood vessels",
+    aboutMe: "",
+    price: 220,
+    consultations: 40,
+    membershipDuration: "3 years and 7 months",
   },
   {
-    id: "88820d-b576-335-9ffc-a81b1b4e7",
+    id: "10",
     name: "Whitley Hail",
     serviceType: SERVICE_TYPE[0],
     image: whitley.src,
@@ -167,9 +215,13 @@ export const doctors: DoctorModel[] = [
     speciality: SPECIALITY_OPTIONS[2],
     degree: DEGREE[0],
     description: "caring for newborn and premature babies",
+    aboutMe: "",
+    price: 150,
+    consultations: 100,
+    membershipDuration: "5 years and 4 months",
   },
   {
-    id: "8800f0d-b576-335-9ffc-a81b4b1b4e7",
+    id: "11",
     name: "Brody Stone",
     serviceType: SERVICE_TYPE[1],
     image: brody.src,
@@ -181,10 +233,14 @@ export const doctors: DoctorModel[] = [
     degree: DEGREE[3],
     description:
       "Diagnosing and treating diseases of the respiratory system, including airways, alveoli and blood vessels",
+    aboutMe: "",
+    price: 180,
+    consultations: 70,
+    membershipDuration: "4 years and 3 months",
   },
 
   {
-    id: "88820f0d-b576-335ffc-a81b1b4e7",
+    id: "12",
     name: "River Strong",
     serviceType: SERVICE_TYPE[1],
     image: amaris.src,
@@ -195,9 +251,13 @@ export const doctors: DoctorModel[] = [
     speciality: SPECIALITY_OPTIONS[5],
     degree: DEGREE[2],
     description: "caring for newborn and premature babies",
+    aboutMe: "",
+    price: 250,
+    consultations: 20,
+    membershipDuration: "1 years and 2 months",
   },
   {
-    id: "8882000f-b576-335-9ffc-a84b1b4e7",
+    id: "13",
     name: "Atlas Sierra",
     serviceType: SERVICE_TYPE[0],
     image: lukas.src,
@@ -209,10 +269,14 @@ export const doctors: DoctorModel[] = [
     degree: DEGREE[3],
     description:
       "Diagnosing and treating diseases of the respiratory system, including airways, alveoli and blood vessels",
+    aboutMe: "",
+    price: 200,
+    consultations: 30,
+    membershipDuration: "3 years and 2 months",
   },
 
   {
-    id: "97420f0d-b576-4f6-a84b1b4e77",
+    id: "14",
     name: "Abner Duran",
     serviceType: SERVICE_TYPE[0],
     image: jack.src,
@@ -224,10 +288,14 @@ export const doctors: DoctorModel[] = [
     degree: DEGREE[1],
     description:
       "Diagnosing and treating conditions of the female reproductive system",
+    aboutMe: "",
+    price: 150,
+    consultations: 60,
+    membershipDuration: "4 years and 2 months",
   },
 
   {
-    id: "88820f0-576-9ffc-a84b1b4e7",
+    id: "15",
     name: "Jamal Tanner",
     serviceType: SERVICE_TYPE[0],
     image: lukas.src,
@@ -238,5 +306,9 @@ export const doctors: DoctorModel[] = [
     speciality: SPECIALITY_OPTIONS[1],
     degree: DEGREE[0],
     description: "Expert in the care of your heart and blood vessels",
+    aboutMe: "",
+    price: 180,
+    consultations: 50,
+    membershipDuration: "1 years and 8 months",
   },
 ];

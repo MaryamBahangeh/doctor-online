@@ -1,0 +1,12 @@
+.doctor-detail {
+  padding-block: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+
+  .Info {
+    align-self: start;
+    display: grid;
+    gap: 1rem;
+  }
+}
