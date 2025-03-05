@@ -6,7 +6,7 @@ import { FiltersType } from "@/types/filters-type";
 import { SelectOptionType } from "@/types/select-option-type";
 
 import styles from "./ItemsFilter.module.css";
-import Button, { Variant } from "@/components/Button/Button";
+import Button, { Variant } from "@/components/button/Button";
 
 type Props = {
   title: string;

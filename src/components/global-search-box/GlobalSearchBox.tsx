@@ -9,7 +9,7 @@ import MingcuteSearchLine from "@/icons/MingcuteSearchLine";
 import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
 
 import styles from "./GlobalSearchBox.module.css";
-import Button, { Variant } from "@/components/Button/Button";
+import Button, { Variant } from "@/components/button/Button";
 
 function GlobalSearchBox() {
   const { filters, dispatchFilters } = useContext(FiltersContext);

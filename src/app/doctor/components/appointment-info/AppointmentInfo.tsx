@@ -3,7 +3,7 @@ import React from "react";
 import { DoctorModel } from "@/models/doctor";
 
 import Card from "@/components/card/Card";
-import Button, { Color, Variant } from "@/components/Button/Button";
+import Button, { Color, Variant } from "@/components/button/Button";
 
 import styles from "./AppointmentInfo.module.css";
 

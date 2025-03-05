@@ -4,7 +4,7 @@ import Card from "@/components/card/Card";
 import StarBold from "@/icons/StarBold";
 import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
 import { DoctorModel } from "@/models/doctor";
-import Button, { Color, Variant } from "@/components/Button/Button";
+import Button, { Color, Variant } from "@/components/button/Button";
 
 import styles from "./DoctorCard.module.css";
 import Link from "next/link";
