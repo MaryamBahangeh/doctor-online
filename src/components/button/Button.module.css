@@ -3,6 +3,18 @@
 
   text-decoration: none;
 
+  color: inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  cursor: pointer;
+
+  transition: var(--animation-duration-fast) ease-in-out;
+  transition-property: background-color, color;
+
   &:not(.idle) {
     padding: 0.5rem 1rem;
 
@@ -13,9 +25,6 @@
 
   &.solid {
     border: 0.1rem solid var(--color-primary);
-
-    inline-size: 15rem;
-    min-inline-size: min(15rem, 100%);
 
     font-weight: 700;
 
@@ -64,7 +73,4 @@
     color: var(--color-gray-99);
   }
 
-  &:hover {
-    cursor: pointer;
-  }
 }
