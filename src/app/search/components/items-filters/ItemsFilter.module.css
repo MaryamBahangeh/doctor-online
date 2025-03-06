@@ -9,7 +9,7 @@
   }
 
   button {
-    text-align: start;
+    justify-content: start;
   }
 
   .selected {

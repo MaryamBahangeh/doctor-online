@@ -48,7 +48,7 @@ export default function SignInForm(): ReactElement {
             <div className={styles["change-form"]}>
               Haven&#39;t sign up yet?
               {` `}
-              <Link href="/auth/sign-up">Sing Up</Link>.
+              <Link href="/auth/sign-up">Sing up</Link>.
             </div>
           </div>
           <div className={styles.visuals}>
