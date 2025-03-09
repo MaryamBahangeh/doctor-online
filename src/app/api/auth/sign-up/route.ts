@@ -14,6 +14,29 @@ export async function POST(request: Request): Promise<ApiResponseType<null>> {
     if (parseError !== null) {
       return NextResponse.json({ error: parseError, status: 400 });
     }
+
+    let foundUser = await prisma.user.findUnique({
+      where: { username: body.username },
+    });
+
+    if (foundUser) {
+      return NextResponse.json({
+        error: "This username is already taken",
+        status: 400,
+      });
+    }
+
+    foundUser = await prisma.user.findUnique({
+      where: { email: body.email },
+    });
+
+    if (foundUser) {
+      return NextResponse.json({
+        error: "This email is already taken",
+        status: 400,
+      });
+    }
+
     await prisma.user.create({ data: body });
 
     return NextResponse.json({ data: null }, { status: 201 });
