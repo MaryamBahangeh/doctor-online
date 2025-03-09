@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "@/styles/typography.css";
 
 import Header from "@/components/header/Header";
@@ -7,9 +7,10 @@ import Footer from "@/components/footer/Footer";
 
 import "./globals.css";
 
-const openSans = Open_Sans({
+const roboto = Roboto({
   subsets: ["latin"],
   display: "swap",
+  weight: ["100", "300", "400", "500", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={openSans.className}>
+    <html lang="en" className={roboto.className}>
       <body>
         <Header />
 

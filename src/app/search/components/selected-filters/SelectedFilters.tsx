@@ -6,7 +6,7 @@ import { FiltersContext } from "@/app/search/providers/FiltersProvider";
 
 import Card from "@/components/card/Card";
 import SolarTrashBinMinimalisticLinear from "@/icons/SolarTrashBinMinimalisticLinear";
-import Button, { Variant } from "@/components/Button/Button";
+import Button, { Variant } from "@/components/button/Button";
 import { FiltersType } from "@/types/filters-type";
 import { APPOINTMENT_TIMES } from "@/options/appointment-time-options";
 
