@@ -16,6 +16,10 @@ import MingcuteIncognitoModeLine from "@/icons/MingcuteIncognitoModeLine";
 import MingcuteUser3Line from "@/icons/MingcuteUser3Line";
 import MingcuteMailLine from "@/icons/MingcuteMailLine";
 
+import { SignUpDto } from "@/dto/auth.dto";
+
+import { toast } from "react-toastify";
+
 import styles from "@/app/auth/styles/AuthForm.module.css";
 
 export default function SignUpForm(): ReactElement {
@@ -23,6 +27,35 @@ export default function SignUpForm(): ReactElement {
     e: FormEvent<HTMLFormElement>,
   ): Promise<void> => {
     e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+
+    const dto: SignUpDto = {
+      name: formData.get("name") as string,
+      username: formData.get("username") as string,
+      email: formData.get("email") as string,
+      password: formData.get("password") as string,
+    };
+
+    const response = await fetch("/api/auth/sign-up", {
+      method: "POST",
+      body: JSON.stringify(dto),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      let message = "An unexpected error occurred.";
+
+      if ("error" in result) {
+        message = result.error;
+      }
+
+      toast.error(message);
+      return;
+    }
+
+    toast.success("registration succeed.");
   };
 
   return (

@@ -12,7 +12,7 @@ export async function POST(request: Request): Promise<ApiResponseType<null>> {
     const [parseError, body] = await parseBody<SignUpDto>(request);
 
     if (parseError !== null) {
-      return NextResponse.json({ error: parseError, status: 400 });
+      return NextResponse.json({ error: parseError }, { status: 400 });
     }
 
     let foundUser = await prisma.user.findUnique({
@@ -20,10 +20,12 @@ export async function POST(request: Request): Promise<ApiResponseType<null>> {
     });
 
     if (foundUser) {
-      return NextResponse.json({
-        error: "This username is already taken",
-        status: 400,
-      });
+      return NextResponse.json(
+        {
+          error: "This username is already taken.",
+        },
+        { status: 400 },
+      );
     }
 
     foundUser = await prisma.user.findUnique({
@@ -31,10 +33,12 @@ export async function POST(request: Request): Promise<ApiResponseType<null>> {
     });
 
     if (foundUser) {
-      return NextResponse.json({
-        error: "This email is already taken",
-        status: 400,
-      });
+      return NextResponse.json(
+        {
+          error: "This email is already taken.",
+        },
+        { status: 400 },
+      );
     }
 
     await prisma.user.create({ data: body });
