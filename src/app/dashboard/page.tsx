@@ -1,11 +1,25 @@
 "use client";
 
 import React from "react";
+import { fetchWithToast } from "@/utils/fetch-utils";
 import styles from "./page.module.css";
 import Button, { Color, Variant } from "@/components/button/Button";
 
+import { useRouter } from "next/navigation";
+
 function Page() {
-  const signOutButtonClickHandler = () => {};
+  const router = useRouter();
+
+  const signOutButtonClickHandler = async () => {
+    const result = await fetchWithToast<null>("/api/auth/sign-out", {
+      method: "POST",
+    });
+
+    if (result.error) {
+      return;
+    }
+    router.push("/");
+  };
 
   return (
     <div className={styles.page}>
