@@ -3,7 +3,7 @@ import { parseBody, setAuthCookie, wrapWithTryCatch } from "@/utils/api.utils";
 import { SignInDto } from "@/dto/auth.dto";
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
-import { comparePassword, hashPassword } from "@/utils/bcrypt.utils";
+import { comparePassword } from "@/utils/bcrypt.utils";
 
 export async function POST(request: Request): Promise<ApiResponseType<null>> {
   return wrapWithTryCatch(async () => {
