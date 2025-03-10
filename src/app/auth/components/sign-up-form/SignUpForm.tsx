@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, ReactElement } from "react";
+import { FormEvent, ReactElement, useRef } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -18,11 +18,12 @@ import MingcuteMailLine from "@/icons/MingcuteMailLine";
 
 import { SignUpDto } from "@/dto/auth.dto";
 
-import { toast } from "react-toastify";
-
 import styles from "@/app/auth/styles/AuthForm.module.css";
+import { fetchWithToast } from "@/utils/fetch-utils";
 
 export default function SignUpForm(): ReactElement {
+  const formRef = useRef<HTMLFormElement>(null);
+
   const formSubmitHandler = async (
     e: FormEvent<HTMLFormElement>,
   ): Promise<void> => {
@@ -37,25 +38,20 @@ export default function SignUpForm(): ReactElement {
       password: formData.get("password") as string,
     };
 
-    const response = await fetch("/api/auth/sign-up", {
-      method: "POST",
-      body: JSON.stringify(dto),
-    });
+    const result = await fetchWithToast<null>(
+      "/api/auth/sign-up",
+      {
+        method: "POST",
+        body: JSON.stringify(dto),
+      },
+      "registration succeed.",
+    );
 
-    const result = await response.json();
-
-    if (!response.ok) {
-      let message = "An unexpected error occurred.";
-
-      if ("error" in result) {
-        message = result.error;
-      }
-
-      toast.error(message);
+    if (result.error) {
       return;
     }
 
-    toast.success("registration succeed.");
+    formRef.current?.reset();
   };
 
   return (
@@ -64,7 +60,7 @@ export default function SignUpForm(): ReactElement {
         <div className={styles["card-content"]}>
           <div className={styles.writings}>
             <h1>Sign Up</h1>
-            <form onSubmit={formSubmitHandler}>
+            <form ref={formRef} onSubmit={formSubmitHandler}>
               <NormalInput
                 label="name"
                 type="text"
