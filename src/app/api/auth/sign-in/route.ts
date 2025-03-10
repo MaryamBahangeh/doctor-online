@@ -1,5 +1,5 @@
 import { ApiResponseType } from "@/types/api-response.type";
-import { parseBody, wrapWithTryCatch } from "@/utils/api.utils";
+import { parseBody, setAuthCookie, wrapWithTryCatch } from "@/utils/api.utils";
 import { SignInDto } from "@/dto/auth.dto";
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
@@ -24,6 +24,8 @@ export async function POST(request: Request): Promise<ApiResponseType<null>> {
         { status: 404 },
       );
     }
+
+    await setAuthCookie();
 
     return NextResponse.json({ data: null, status: 200 });
   });

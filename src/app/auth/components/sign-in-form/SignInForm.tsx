@@ -17,9 +17,11 @@ import MingcuteUser3Line from "@/icons/MingcuteUser3Line";
 import styles from "@/app/auth/styles/AuthForm.module.css";
 import { fetchWithToast } from "@/utils/fetch-utils";
 import { SignInDto } from "@/dto/auth.dto";
+import { useRouter } from "next/navigation";
 
 export default function SignInForm(): ReactElement {
   const formRef = useRef<HTMLFormElement>(null);
+  const router = useRouter();
 
   const formSubmitHandler = async (
     e: FormEvent<HTMLFormElement>,
@@ -47,6 +49,7 @@ export default function SignInForm(): ReactElement {
     }
 
     formRef.current?.reset();
+    router.push("/dashboard");
   };
 
   return (
