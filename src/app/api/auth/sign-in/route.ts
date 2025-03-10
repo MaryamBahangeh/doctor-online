@@ -3,6 +3,7 @@ import { parseBody, setAuthCookie, wrapWithTryCatch } from "@/utils/api.utils";
 import { SignInDto } from "@/dto/auth.dto";
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
+import { comparePassword, hashPassword } from "@/utils/bcrypt.utils";
 
 export async function POST(request: Request): Promise<ApiResponseType<null>> {
   return wrapWithTryCatch(async () => {
@@ -13,15 +14,20 @@ export async function POST(request: Request): Promise<ApiResponseType<null>> {
     }
 
     const foundUser = await prisma.user.findUnique({
-      where: { username: body.username, password: body.password },
+      where: { username: body.username },
     });
 
     if (!foundUser) {
       return NextResponse.json(
-        {
-          error: "Invalid username or password",
-        },
+        { error: "Invalid username or password" },
         { status: 404 },
+      );
+    }
+
+    if (!(await comparePassword(body.password, foundUser.password))) {
+      return NextResponse.json(
+        { error: "Invalid username or password" },
+        { status: 401 },
       );
     }
 
