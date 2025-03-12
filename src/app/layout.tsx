@@ -4,6 +4,7 @@ import "@/styles/typography.css";
 
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import Toaster from "@/components/toaster/Toaster";
 
 import "./globals.css";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         </p>
 
         <Footer />
+        <Toaster />
       </body>
     </html>
   );
