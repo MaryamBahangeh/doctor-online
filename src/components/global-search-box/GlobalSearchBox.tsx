@@ -56,12 +56,12 @@ function GlobalSearchBox() {
         />
       </div>
 
-      <div className={styles.divider}></div>
+      {/*<div className={styles.divider}></div>*/}
 
-      <Button variant={Variant.TEXT}>
-        <MingcuteLocationLine></MingcuteLocationLine>
-        All Countries
-      </Button>
+      {/*<Button variant={Variant.TEXT}>*/}
+      {/*  <MingcuteLocationLine></MingcuteLocationLine>*/}
+      {/*  All Countries*/}
+      {/*</Button>*/}
     </form>
   );
 }
