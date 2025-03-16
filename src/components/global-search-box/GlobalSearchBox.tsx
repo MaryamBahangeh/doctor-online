@@ -6,10 +6,10 @@ import { usePathname, useRouter } from "next/navigation";
 import { FiltersContext } from "@/app/search/providers/FiltersProvider";
 
 import MingcuteSearchLine from "@/icons/MingcuteSearchLine";
-import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
+// import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
 
 import styles from "./GlobalSearchBox.module.css";
-import Button, { Variant } from "@/components/button/Button";
+// import Button, { Variant } from "@/components/button/Button";
 
 function GlobalSearchBox() {
   const { filters, dispatchFilters } = useContext(FiltersContext);
