@@ -10,8 +10,6 @@ import Button, { ButtonType, Variant } from "@/components/button/Button";
 const pages = [
   { href: "/", title: "Home" },
   { href: "/search", title: "Search" },
-  { href: "/about", title: "About" },
-  { href: "/myPanel", title: "My Panel" },
 ];
 
 function Header() {
